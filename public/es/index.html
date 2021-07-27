@@ -2,6 +2,269 @@
 <html>
 
 <head>
+  <html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<style>/* fonts used on the navbar*/
+
+.nav-font{
+	font-family: 'Roboto', cursive;
+	font-weight: 500;
+	font-size: 1.05em;
+}
+/*navbar responsive styling */
+
+body .nav-body {
+ margin: 0;
+ padding: 0;
+}
+
+.nav-bar {
+  height: 85px;
+  background: #249141;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+	z-index: 1;
+}
+.brand a img {
+ max-height: 250px;
+}
+
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+	color: #ffffff;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 10px;
+  line-height: 80px;
+  background: #249141;
+  color: #ffffff;
+  text-decoration: none;
+
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  border-bottom: 3px solid #52d173;
+	color: #ffffff;
+	text-decoration: none;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #249141;
+  height: 85px;
+  width: 70px;
+}
+
+.flag{
+	padding: 1.7em;
+}
+
+@media only screen and (max-width: 801px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 25px;
+    line-height: 20px;
+ 		padding-left: 25%;
+
+  }
+  nav ul li ul li a {
+    padding-left: 30%;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+ .brand a img {
+ max-height: 100px;
+ }
+
+ .flag{
+	 padding:0px;
+ }
+
+}
+
+@media screen and (min-width: 801px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+</style>
+<script defer language="javascript" type="text/javascript"  src="/js/header.js"></script>
+
+
+<body class="nav-body" style="background-color:#f0f0f0;">
+  <section class="nav-bar">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="/es/"><img src="/images/quaether-logo.png"></a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="/es/" class= "nav-font">Inicio</a>
+        </li>
+        <li>
+          <a class= "nav-font">Acerca de</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="/es/sobre/quaether"class= "nav-font">Quaether</a>
+            </li>
+            <li>
+              <a href="/es/sobre/tecnologia-bsq"class= "nav-font">Tecnología BSQ</a>
+            </li>
+            <li>
+              <a href="/es/sobre/codigos"class= "nav-font">Códigos</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class= "nav-font">Productos</a>
+			    <ul class="nav-dropdown">
+            <li>
+              <a href="/es/productos/bsq_mini"class= "nav-font">BSQ Mini</a>
+            </li>
+            <li>
+                <a href="/es/productos/bsq_neo"class= "nav-font">BSQ Neo</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/es/mantenimiento"class= "nav-font">Mantenimiento</a>
+        </li>
+        <li>
+          <a href="/es/blog"class= "nav-font">Blog</a>
+        </li>
+        <li>
+          <a href="/es/contacto"class= "nav-font">Contacto</a>
+        </li>
+        <li>
+          <a href="/"style="border-bottom:none;"><img class="flag" src="/images/gb.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+</body>
+
+<body>
+</html>
+
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <link rel="checkmark" type="image/svg+xml" href="images/check-mark.svg"/>
@@ -10,10 +273,203 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 </head>
 
+<style>/* fonts used on the navbar*/
+
+.nav-font{
+	font-family: 'Roboto', cursive;
+	font-weight: 500;
+	font-size: 1.05em;
+}
+/*navbar responsive styling */
+
+body .nav-body {
+ margin: 0;
+ padding: 0;
+}
+
+.nav-bar {
+  height: 85px;
+  background: #249141;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+	z-index: 1;
+}
+.brand a img {
+ max-height: 250px;
+}
+
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+	color: #ffffff;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 10px;
+  line-height: 80px;
+  background: #249141;
+  color: #ffffff;
+  text-decoration: none;
+
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  border-bottom: 3px solid #52d173;
+	color: #ffffff;
+	text-decoration: none;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #249141;
+  height: 85px;
+  width: 70px;
+}
+
+.flag{
+	padding: 1.7em;
+}
+
+@media only screen and (max-width: 801px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 25px;
+    line-height: 20px;
+ 		padding-left: 25%;
+
+  }
+  nav ul li ul li a {
+    padding-left: 30%;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+ .brand a img {
+ max-height: 100px;
+ }
+
+ .flag{
+	 padding:0px;
+ }
+
+}
+
+@media screen and (min-width: 801px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+</style>
 <style>/* fonts used on the navbar*/
 
 .font1 {
@@ -325,269 +781,6 @@ color: black;
 <body style="background-color:#f0f0f0;">
 
 
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-
-<style>/* fonts used on the navbar*/
-
-.nav-font{
-	font-family: 'Roboto', cursive;
-	font-weight: 500;
-	font-size: 1.05em;
-}
-/*navbar responsive styling */
-
-body .nav-body {
- margin: 0;
- padding: 0;
-}
-
-.nav-bar {
-  height: 85px;
-  background: #249141;
-}
-
-.brand {
-  position: absolute;
-  padding-left: 20px;
-  float: left;
-	z-index: 1;
-}
-.brand a img {
- max-height: 250px;
-}
-
-.brand a,
-.brand a:visited {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.nav-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-nav {
-  float: right;
-}
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-nav ul li {
-  float: left;
-  position: relative;
-	color: #ffffff;
-}
-nav ul li a,
-nav ul li a:visited {
-  display: block;
-  padding: 0 10px;
-  line-height: 80px;
-  background: #249141;
-  color: #ffffff;
-  text-decoration: none;
-
-}
-nav ul li a:hover,
-nav ul li a:visited:hover {
-  border-bottom: 3px solid #52d173;
-	color: #ffffff;
-	text-decoration: none;
-}
-nav ul li a:not(:only-child):after,
-nav ul li a:visited:not(:only-child):after {
-  padding-left: 4px;
-  content: ' ▾';
-}
-nav ul li ul li {
-  min-width: 190px;
-}
-nav ul li ul li a {
-  padding: 15px;
-  line-height: 20px;
-	color: #ffffff;
-	font-weight: 400;
-	font-size: 1em;
-}
-
-.nav-dropdown {
-  position: absolute;
-  display: none;
-  z-index: 1;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-}
-.nav-mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #249141;
-  height: 85px;
-  width: 70px;
-}
-
-.flag{
-	padding: 1.7em;
-}
-
-@media only screen and (max-width: 801px) {
-  .nav-mobile {
-    display: block;
-  }
-
-  nav {
-    width: 100%;
-    padding: 70px 0 15px;
-  }
-  nav ul {
-    display: none;
-  }
-  nav ul li {
-    float: none;
-  }
-  nav ul li a {
-    padding: 25px;
-    line-height: 20px;
- 		padding-left: 25%;
-
-  }
-  nav ul li ul li a {
-    padding-left: 30%;
-  }
-
-  .nav-dropdown {
-    position: static;
-  }
- .brand a img {
- max-height: 100px;
- }
-
- .flag{
-	 padding:0px;
- }
-
-}
-
-@media screen and (min-width: 801px) {
-  .nav-list {
-    display: block !important;
-  }
-}
-#nav-toggle {
-  position: absolute;
-  left: 18px;
-  top: 22px;
-  cursor: pointer;
-  padding: 10px 35px 16px 0px;
-}
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: #ffffff;
-  position: absolute;
-  display: block;
-  content: '';
-  transition: all 300ms ease-in-out;
-}
-#nav-toggle span:before {
-  top: -10px;
-}
-#nav-toggle span:after {
-  bottom: -10px;
-}
-#nav-toggle.active span {
-  background-color: transparent;
-}
-#nav-toggle.active span:before, #nav-toggle.active span:after {
-  top: 0;
-}
-#nav-toggle.active span:before {
-  transform: rotate(45deg);
-}
-#nav-toggle.active span:after {
-  transform: rotate(-45deg);
-}
-
-article {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 10px;
-}
-</style>
-<script defer language="javascript" type="text/javascript"  src="/js/header.js"></script>
-
-
-<body class="nav-body" style="background-color:#f0f0f0;">
-  <section class="nav-bar">
-  <div class="nav-container">
-    <div class="brand">
-      <a href="/es/"><img src="/images/quaether-logo.png"></a>
-    </div>
-    <nav>
-      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-      <ul class="nav-list">
-        <li>
-          <a href="/es/" class= "nav-font">Inicio</a>
-        </li>
-        <li>
-          <a class= "nav-font">Acerca de</a>
-          <ul class="nav-dropdown">
-            <li>
-              <a href="/es/sobre/quaether"class= "nav-font">Quaether</a>
-            </li>
-            <li>
-              <a href="/es/sobre/tecnologia-bsq"class= "nav-font">Tecnología BSQ</a>
-            </li>
-            <li>
-              <a href="/es/sobre/codigos"class= "nav-font">Códigos</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a class= "nav-font">Productos</a>
-			    <ul class="nav-dropdown">
-            <li>
-              <a href="/es/productos/bsq_mini"class= "nav-font">BSQ Mini</a>
-            </li>
-            <li>
-                <a href="/es/productos/bsq_neo"class= "nav-font">BSQ Neo</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/es/mantenimiento"class= "nav-font">Mantenimiento</a>
-        </li>
-        <li>
-          <a href="/es/blog"class= "nav-font">Blog</a>
-        </li>
-        <li>
-          <a href="/es/contacto"class= "nav-font">Contacto</a>
-        </li>
-        <li>
-          <a href="/"style="border-bottom:none;"><img class="flag" src="/images/gb.png"></a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</section>
-</body>
-
-<body>
-</html>
-
 
 <div class="aviso">
     <span class="boton-cerrar" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -789,7 +982,7 @@ article {
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 </head>
 
