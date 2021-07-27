@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  {{ partialCached "header-es.html" . .Params.enlink }}
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <link rel="checkmark" type="image/svg+xml" href="images/check-mark.svg"/>
@@ -22,7 +23,6 @@
 <body style="background-color:#f0f0f0;">
 
 <!-- navbar responsive setting -->
-{{ partialCached "header-es.html" . .Params.enlink }}
 
 <div class="aviso">
     <span class="boton-cerrar" onclick="this.parentElement.style.display='none';">&times;</span>
