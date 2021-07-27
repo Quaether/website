@@ -1,0 +1,1077 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+<style>:root{
+    --text_color: #444;
+    --main_color: #27ae60;
+    --bg_color: rgba(46,204,113,0.1);
+}
+
+[role=tab-1] {
+  --text_color: #444;
+  --main_color: #0ba133;
+  --bg_color: rgba(46,204,113,0.1);
+}
+
+[role=tab-2] {
+  --text_color: #444;
+  --main_color: #bfb00b;
+  --bg_color: rgba(209, 204, 148,0.1);
+}
+
+[role=tab-3] {
+  --text_color: #444;
+  --main_color: #a3230a;
+  --bg_color: rgba(209, 158, 148,0.1);
+}
+
+[role=tab-4] {
+  --text_color: #444;
+  --main_color: #a30a7d;
+  --bg_color: rgba(194, 143, 181,0.1);
+}
+
+[role=tab-5] {
+  --text_color: #444;
+  --main_color: #15157a;
+  --bg_color: rgba(140, 140, 194,0.1);
+}
+
+[role=tab-6] {
+  --text_color: #444;
+  --main_color: #07a4b8;
+  --bg_color: rgba(140, 188, 194,0.1);
+}
+
+a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+.vertical-tab{
+    font-family: 'Roboto', sans-serif;
+    display: table;
+}
+.vertical-tab .nav-tabs{
+   display: table-cell;
+   width: 28%;
+   min-width: 28%;
+   border: none;
+   position: relative;
+}
+.vertical-tab .nav-tabs li{
+   float: none;
+   vertical-align: top;
+}
+.vertical-tab .nav-tabs li a{
+    color: #505050;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 12px;
+    margin: 0 0 7px 0;
+    border-radius: 0;
+    border: none;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.vertical-tab .nav-tabs li:last-child a{ margin-bottom: 0; }
+.vertical-tab .nav-tabs li a:hover,
+.vertical-tab .nav-tabs li.active a,
+.vertical-tab .nav-tabs li.active a:hover{
+    color: #fff;
+    border:none;
+}
+.vertical-tab .nav-tabs li a:before,
+.vertical-tab .nav-tabs li a:after{
+    content: '';
+    height: 0;
+    width: 100%;
+    background-color: var(--main_color);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition:all 0.3s ease-out 0s;
+}
+.vertical-tab .nav-tabs li.active a:before,
+.vertical-tab .nav-tabs li a:hover:before{
+    height: 100%;
+}
+.vertical-tab .nav-tabs li a:after{
+    height: 18px;
+    width: 18px;
+    background-color: #505050;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transform:translateY(-50%) scale(0);
+    top: 50%;
+    right: -9px;
+    transition-delay: 0.15s;
+}
+.vertical-tab .nav-tabs li.active a:after,
+.vertical-tab .nav-tabs li a:hover:after{
+    transform:translateY(-50%) scale(1);
+}
+.vertical-tab .tab-content{
+    color: #505050;
+    background: rgba(0,0,0,0.03);
+    font-size: 15px;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 23px;
+    vertical-align: top;
+    padding: 15px 18px 0;
+    margin-top: 10px;
+    display: table-cell;
+    box-shadow: 5px 5px 5px grey;
+    border: 2px solid lightgrey;
+
+}
+.vertical-tab .tab-content h3{
+    color: var(--main_color);
+    font-size: 24px;
+    margin: 0 0 5px 0;
+}
+@media only screen and (max-width: 900px){
+    .vertical-tab .nav-tabs{
+        display: block;
+        width: 100%;
+        border-right: none;
+    }
+    .vertical-tab .nav-tabs li{ margin: 0 0 10px 0; }
+    .vertical-tab .nav-tabs li:last-child{ margin: 0; }
+    .vertical-tab .nav-tabs li a{
+        padding: 10px;
+        margin: 0;
+    }
+    .vertical-tab .nav-tabs li a:after{
+        top: auto;
+        bottom: -9px;
+        right: 50%;
+        transform: translateY(0) translateX(50%) scale(0);
+    }
+    .vertical-tab .nav-tabs li.active a:after,
+    .vertical-tab .nav-tabs li a:hover:after{
+        transform: translateY(0) translateX(50%) scale(1);
+    }
+    .vertical-tab .tab-content{
+        display: block;
+        padding: 20px 15px 5px;
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+/* TIMELINE */
+.main-timeline{ font-family: 'Roboto', sans-serif; }
+.main-timeline:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.main-timeline .timeline{
+    width: 80%;
+    float: left;
+}
+.main-timeline .timeline-content{
+    color: #fff;
+    background: linear-gradient(to right, #27ae60,#41b571);
+    padding: 20px 20px 20px 170px;
+    margin: 0 0 60px;
+    border-radius: 100px 0 0;
+    display: block;
+    position: relative;
+}
+.main-timeline .timeline-content:hover{ text-decoration: none; }
+.main-timeline .timeline-icon{
+    color: #fff;
+    background: linear-gradient(to right, #27ae60,#41b571);
+    font-size: 50px;
+    line-height: 100px;
+    text-align: center;
+    height: 120px;
+    width: 120px;
+    border: 10px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -60px;
+    left: 20px;
+}
+.main-timeline .description{
+    font-size: 17px;
+    margin: 0;
+}
+.main-timeline .timeline:nth-child(even){
+    margin: -60px 0 60px;
+    float: right;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content{
+    padding: 20px 170px 20px 20px;
+    margin: 60px 0 0;
+    border-radius: 0 0 100px 0;
+}
+.main-timeline .timeline:nth-child(even) .timeline-icon{
+    left: auto;
+    right: 20px;
+    bottom: auto;
+    top: -60px;
+}
+.main-timeline .timeline:nth-child(4n+2) .timeline-content,
+.main-timeline .timeline:nth-child(4n+2) .timeline-icon{
+    background: linear-gradient(to right, #27ae60,#41b571);
+}
+.main-timeline .timeline:nth-child(4n+3) .timeline-content,
+.main-timeline .timeline:nth-child(4n+3) .timeline-icon{
+    background: linear-gradient(to right, #27ae60,#41b571);
+}
+.main-timeline .timeline:nth-child(4n+4) .timeline-content,
+.main-timeline .timeline:nth-child(4n+4) .timeline-icon{
+    background: linear-gradient(to right, #27ae60,#41b571);
+}
+@media screen and (max-width:767px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        width: 100%;
+        margin: 0 0 15px;
+    }
+    .main-timeline .timeline-content,
+    .main-timeline .timeline:nth-child(even) .timeline-content{
+        padding: 60px 15px 15px 15px;
+        margin: 40px 0 0;
+        border-radius: 0 0 50px 0;
+    }
+    .main-timeline .timeline-icon,
+    .main-timeline .timeline:nth-child(even) .timeline-icon{
+        font-size: 30px;
+        line-height: 60px;
+        height: 80px;
+        width: 80px;
+        right: 15px;
+        left: auto;
+        top: -40px;
+    }
+}
+@media screen and (max-width:567px){
+    .main-timeline .title{ font-size: 18px; }
+    .responsive-icon{ width: 100px; height: 100px;}
+}
+</style>
+<body style="background-color:#f0f0f0;">
+
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<style>/* fonts used on the navbar*/
+
+.nav-font{
+	font-family: 'Roboto', cursive;
+	font-weight: 500;
+	font-size: 1.05em;
+}
+/*navbar responsive styling */
+
+body .nav-body {
+ margin: 0;
+ padding: 0;
+}
+
+.nav-bar {
+  height: 85px;
+  background: #249141;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+	z-index: 1;
+}
+.brand a img {
+ max-height: 250px;
+}
+
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+	color: #ffffff;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 10px;
+  line-height: 80px;
+  background: #249141;
+  color: #ffffff;
+  text-decoration: none;
+
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  border-bottom: 3px solid #52d173;
+	color: #ffffff;
+	text-decoration: none;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #249141;
+  height: 85px;
+  width: 70px;
+}
+
+.flag{
+	padding: 1.7em;
+}
+
+@media only screen and (max-width: 801px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 25px;
+    line-height: 20px;
+ 		padding-left: 25%;
+
+  }
+  nav ul li ul li a {
+    padding-left: 30%;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+ .brand a img {
+ max-height: 100px;
+ }
+
+ .flag{
+	 padding:0px;
+ }
+
+}
+
+@media screen and (min-width: 801px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+</style>
+<script defer language="javascript" type="text/javascript"  src="/js/header.js"></script>
+
+
+<body class="nav-body" style="background-color:#f0f0f0;">
+  <section class="nav-bar">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="/es/"><img src="/images/quaether-logo.png"></a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="/es/" class= "nav-font">Inicio</a>
+        </li>
+        <li>
+          <a class= "nav-font">Acerca de</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="/es/sobre/quaether"class= "nav-font">Quaether</a>
+            </li>
+            <li>
+              <a href="/es/sobre/tecnologia-bsq"class= "nav-font">Tecnología BSQ</a>
+            </li>
+            <li>
+              <a href="/es/sobre/codigos"class= "nav-font">Códigos</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class= "nav-font">Productos</a>
+			    <ul class="nav-dropdown">
+            <li>
+              <a href="/es/productos/bsq_mini"class= "nav-font">BSQ Mini</a>
+            </li>
+            <li>
+                <a href="/es/productos/bsq_neo"class= "nav-font">BSQ Neo</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/es/mantenimiento"class= "nav-font">Mantenimiento</a>
+        </li>
+        <li>
+          <a href="/es/blog"class= "nav-font">Blog</a>
+        </li>
+        <li>
+          <a href="/es/contacto"class= "nav-font">Contacto</a>
+        </li>
+        <li>
+          <a href="/../about/coding"style="border-bottom:none;"><img class="flag" src="/images/gb.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+</body>
+
+<body>
+</html>
+
+
+<html>
+
+
+<style>
+
+.font1 {
+	font-family:'Roboto' , sans-serif;
+  font-weight : 500px;
+
+}
+.img-holder {
+	position: relative;
+	display: inline-block;
+	width:100%;
+}
+.img-holder img {
+	display: block;
+}
+.img-holder p {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translate(0, -50%);
+	text-align: center;
+	color: #fff;
+}
+
+.title{
+    font-size: 6em;
+}
+
+.section{
+  font-size: 3em;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+	.title{
+			padding-top:50px;
+	    font-size: 3em;
+	}
+	.section {
+	  font-size: 1.5em;
+	}
+	.header-pic{
+		height: 300px;
+		border-radius: 0px;
+	}
+}
+*/
+</style>
+
+<body>
+<div class="img-holder">
+	<img src="/images/page-header-pic.jpg" alt="Header" class="header-pic" style= "width:100%; height:500px">
+  <p class= "font1 section" style= "color:#f0f0f0;text-transform: uppercase;text-align:center;">Acerca de<br><br><br><br></p>
+  <p class= "font1 title" style= "color:#f0f0f0; text-transform: uppercase;text-align:center;"><b> Códigos</b></p>
+</div>
+</body>
+</html>
+
+
+<body>
+<div class="container" style= "padding-top: 50px;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="main-timeline">
+                <div class="timeline">
+                    <a href="#" class="timeline-content">
+
+                        <p class="description">
+                          La tecnología tiene dos modos de funcionamiento:
+                           <br> AUTOMÁTICO: Interactúa con las energías del entorno generando partículas cuánticas libres.
+                           <br> ENFOCADO: El usuario utiliza un código para dirigir la resonancia hacia un fin específico.
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline">
+                    <a href="#" class="timeline-content">
+                        <p class="description">
+                          El uso de códigos es un ejercicio mental que no requiere tecnología adicional.
+                           <br> El usuario solo necesita vincular los conceptos del código con el problema que está tratando de resolver.
+                           <br> Cuanto más amplio sea el pensamiento detrás del código, más posibilidades de ver un efecto.
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline">
+                    <a href="#" class="timeline-content">
+
+                        <p class="description">
+                          Para construir un código es necesario vincular los conceptos del esquema formando una cadena cerrada.
+                          <br> Se deben respetar las líneas de conexión ya que no todos los conceptos están relacionados entre sí.
+                          <br> Los códigos se pueden aplicar tanto al usuario del dispositivo como a otra persona con la que tienen un estrecho vínculo mental.
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline">
+                    <a href="#" class="timeline-content">
+
+                        <p class="description">
+                          Cuando el usuario envía un código, se genera una resonancia entre el biocampo receptor y el mensaje transmitido por la señal.
+                          <br> La respuesta generalmente se percibe como un 'efecto mariposa' y no como la aceptación de una orden.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<body>
+<div class="row">
+  <div class="col-xl" style="text-align:center; margin:6% auto; padding-top:50px;">
+    <img src="/images/tarjeta.png" alt="Diagrama de la tarjeta de función utilizada para programar el BSQ " class="responsive" width=77% height=auto>
+  </div>
+    <div class="col-xl">
+      <div class="row">
+          <div class="col" style="text-align:center; margin:35% auto;">
+              <div class="vertical-tab" role="tabpanel">
+                  
+                  <ul class="nav nav-tabs" role="tablist">
+                     <li role="presentation"><a href="#Section1" aria-controls="home" role="tab-1" data-toggle="tab">FUNCIÓN</a></li>
+                      <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab-2" data-toggle="tab">TRANSFORMACIÓN</a></li>
+                      <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab-3" data-toggle="tab">REACCIÓN</a></li>
+                      <li role="presentation"><a href="#Section4" aria-controls="messages" role="tab-4" data-toggle="tab">NEO</a></li>
+                      <li role="presentation"><a href="#Section5" aria-controls="messages" role="tab-5" data-toggle="tab">TRABAJO</a></li>
+                      <li role="presentation"><a href="#Section6" aria-controls="messages" role="tab-6" data-toggle="tab">MEMORIA</a></li>
+                  </ul>
+                  
+                  <div class="tab-content tabs">
+                      <div role="tab-1" class="tab-pane fade in active" id="Section1">
+                          <h3>FUNCIÓN</h3><br>
+                          <h4>Representa la acción que queremos lograr con el código.
+                             <br> <br> Como una ecuación matemática, depende de otros conceptos para completar los operandos y obtener el resultado.</h4>
+                      </div>
+                      <div role="tab-2" class="tab-pane fade" id="Section2">
+                          <h3>TRANSFORMACIÓN</h3><br>
+                          <h4>Se aplica cuando es necesario cambiar algún elemento de la situación.
+                             <br> <br> A diferencia del trabajo, es un proceso natural que se desencadena por la voluntad propia del individuo. </h4>
+                      </div>
+                      <div role="tab-3" class="tab-pane fade" id="Section3">
+                          <h3>REACCIÓN</h3><br>
+                          <h4>Cada modificación inducida por los códigos genera un porcentaje de rechazo por parte del biocampo.
+                             <br> <br> La inclusión del concepto de reacción en el código reduce este rechazo y aumenta las posibilidades de éxito. </h4>
+                      </div>
+                      <div role="tab-4" class="tab-pane fade"  id="Section4">
+                          <h3>NEO</h3><br>
+                          <h4>Son los productos que resultan de nuevas combinaciones con el medio ambiente.
+                             <br> <br> Se aplica cuando los problemas no se pueden resolver modificando elementos existentes. Por ejemplo, cuando se busca generar nuevas ideas. </h4>
+                      </div>
+                      <div role="tab-5" class="tab-pane fade"  id="Section5">
+                          <h3>TRABAJO</h3><br>
+                          <h4>Representa el trabajo físico o mental que el individuo debe realizar para lograr el objetivo.
+                          <br> <br> Se relaciona con la transformación de ideas en fuerzas capaces de modificar el entorno. </h4>
+                      </div>
+                      <div role="tab-6" class="tab-pane fade"  id="Section6">
+                          <h3>MEMORIA</h3><br>
+                          <h4>Es responsable de almacenar elementos físicos (grasa) y abstractos (experiencias) dentro del cuerpo.
+                          <br> <br> Debe incluirse en su código para que siga siendo efectivo sin la necesidad de implementarlo a diario. </h4>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    </div>
+</body>
+
+<script>
+
+  $(".nav-tabs").on('click', 'li', function () {
+    $(".nav-tabs li.active").removeClass("active");
+    
+    $(this).addClass("active");
+});
+</script>
+
+<body>
+<div container>
+    <div class="row" style= "padding-top:50px">
+    <div class="col-md-6" style="text-align:center; padding-top: 50px;background:linear-gradient(to top, #009900 -2%, #339933 100%); width:100%; height: 300px;">
+      <h3 class="font1" style= "color:#f0f0f0" ><b> Tarjeta de Funciones para imprimir</b> </h3>
+      <br><br>
+      <a href="/files/TARJETA-CODIGOS.pdf" alt= "Printable function card for BSQ codes" download>
+      <img src="/images/pdf.png" alt="Pdf icon to dowload files" class="responsive-icon" width=100px height=100px>
+      </a>
+     </div>
+     <br><br>
+    <div class="col-md-6" style="text-align:center;padding-top: 50px;background:linear-gradient(to top, #009900 -2%, #339933 100%); width:100%; height: 300px;">
+      <h3 class="font1" style= "color:#f0f0f0"><b> Explicación + códigos de ejemplo</b> </h3>
+      <br><br>
+      <a href="/files/BSQ-CODIGOS-INFO.pdf" alt= "Coding explanation and a list of examples" download>
+      <img src="/images/pdf.png" alt="Pdf icon to dowload files" class="responsive-icon" width=100px height=100px>
+      </a>
+     </div>
+     <br><br>
+    </div>
+  </div>
+</body>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<style>
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body .fo {
+  font-family: acumin-pro, system-ui, sans-serif;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-size: 14px;
+  background-color: #f4f4f4;
+  align-items: start;
+  min-height: 100vh;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #f0f0f0;
+  background-color: #26282c;
+  border-top: 1px solid #2f2f2f;
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 0.1em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-family: 'Roboto', cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+	font-family: 'Roboto', cursive;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(48, 140, 58);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 1em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+	color: white;
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+	flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+hr.breakline {
+  border-top: 2px solid #545454;
+}
+
+.copyright {
+  color: #999;
+}
+
+.modal-main{
+     position: relative;
+     padding-bottom: 65.25%;
+     padding-top: 30px;
+     height: 0;
+     overflow: auto;
+     -webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY
+}
+
+.legal-frame{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+
+  .footer__addr {
+    flex: 1 0px;
+  }
+
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+</style>
+
+<body class="fo">
+<footer class="footer">
+  <div class="footer__addr">
+    <h1 class="footer__logo"style="text-align:center"><img src="/images/quaether.png" style= "width:150px; height:150px;"></h1>
+
+    <address style="text-align:center">
+      La Pampa 2753 1er Piso,1428<br> Buenos Aires, Argentina <br>
+      (011) 54 9 4781-5453 <br><br>
+
+      <a class="footer__btn" style="text-align:center" href="mailto:info@quaether.com">Contáctenos</a>
+    </address>
+  </div>
+
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <h2 class="nav__title"><b>ACERCA DE</b></h2>
+
+      <ul class="nav__ul">
+        <li>
+          <a href="/es/sobre/quaether">Quaether</a>
+        </li>
+
+        <li>
+          <a href="/es/sobre/tecnologia-bsq">Tecnología BSQ</a>
+        </li>
+
+        <li>
+          <a href="/es/sobre/codigos">Códigos</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav__item">
+      <h2 class="nav__title"><b>PRODUCTOS</b></h2>
+
+      <ul class="nav__ul">
+      <li>
+        <a href="/es/productos/bsq_mini">BSQ Mini</a>
+      </li>
+
+      <li>
+        <a href="/es/productos/bsq_neo">BSQ Neo</a>
+      </li>
+    </ul>
+  </li>
+
+    <li class="nav__item">
+        <h2 class="nav__title"><a href="/es/mantenimiento"><b>MANTENIMIENTO</b></a></h2>
+        <h2 class="nav__title"><a href="/es/blog"><b>BLOG</b></a></h2>
+        <h2 class="nav__title"><a href="/es/contacto"><b>CONTACTO</b></a></h2>
+    </li>
+
+    <li class="nav__item">
+      <h2 class="nav__title"><b>LEGAL</b></h2>
+
+      <ul class="nav__ul" id= "myUL">
+        <li data-toggle="modal" data-target="#ppModal" data-whatever="Privacy">
+          <a> Política de Privacidad </a>
+        </li>
+
+        <li data-toggle="modal" data-target="#tcModal" data-whatever="Terms">
+          <a> Términos & Condiciones </a>
+        </li>
+
+        <li data-toggle="modal" data-target="#discModal" data-whatever="Disclaimer">
+          <a>Descargo de Responsabilidad</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="modal fade" id="ppModal"
+          tabindex="-1" role="dialog"
+          aria-labelledby="ppModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" style="color:black"
+                          id="ppModal">
+                          Politica de Privacidad
+                      </h5>
+                      <button type="button" class="close"
+                          data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                  </div>
+                  <div class="modal-main">
+                      <iframe class="legal-frame" src="/files/politica-privacidad.txt"></iframe>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class=
+                          "btn btn-secondary" data-dismiss="modal">
+                          Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal fade" id="tcmodal"
+          tabindex="-1" role="dialog"
+          aria-labelledby="tcModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" style="color:black"
+                          id="tcModal">
+                          Términos y Condiciones</h5>
+                      <button type="button" class="close"
+                          data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                  </div>
+                  <div class="modal-main">
+                    <iframe class="legal-frame" src="/files/terminos.txt"></iframe>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button"
+                          class="btn btn-secondary"
+                          data-dismiss="modal">
+                          Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal fade" id="discmodal"
+          tabindex="-1" role="dialog"
+          aria-labelledby="discModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" style="color:black"
+                          id="discmodal">
+                          Descargo de Responsabilidad
+                      </h5>
+                      <button type="button" class="close"
+                          data-dismiss="modal"
+                          aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                  </div>
+                  <div class="modal-main">
+                    <iframe class="legal-frame" src="/files/descargo.txt"></iframe>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button"
+                          class="btn btn-secondary"
+                          data-dismiss="modal">
+                          Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+  <hr class= "breakline">
+  <div class="copyright">
+    <p style= "text-align:center">&copy; 2021 Quaether. All rights reserved.</p>
+
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+</html>

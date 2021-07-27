@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+
+.contact-container{
+  margin: 4%;
+  text-align: center;
+}
+
+/* Buttons */
+
+.button {
+  color: #7a02fd;
+    font-family: 'Fugaz One', cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 13px 25px;
+    border: 1px solid #7a02fd;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s;
+    display: inline-block;
+}
+
+.button:hover {
+  color: #fff;
+  box-shadow: 0 0 20px -5px #000;
+  transform: scale(1.05);
+}
+
+.button:hover:after {
+  transform: translate(0) rotate(0);
+}
+
+.button:after {
+  content: '';
+  background-color: #7a02fd;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  transform: translate(-100%, 0) rotate(10deg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.button.green{
+    color: #0b7d11;
+    border-color: #0b7d11;
+}
+.button.green:after{ background: #0b7d11; }
+.button.green:hover{ color: #fff; }
+
+.captcha{
+  font-family: 'Fugaz One', cursive;
+  font-size: 20px;
+  color: black;
+}
+
+.hidden {
+   display: none;
+}
+
+.alert-success{
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index:2;
+  border-radius:0px;
+  margin: 4% auto;
+  width: 60%;
+  height: 100px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 2%;
+}
+
+.modal-content{
+  margin: 5% auto 10% auto;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+@media only screen and (max-width: 798px) {
+
+  .button{
+
+  }
+  .modal-content{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 98%;
+    height: 100%;
+    overflow-y: scroll;
+    box-shadow: rgba(0, 0, 0, 0);
+  }
+  .submit{
+    text-align: right;
+  }
+}
