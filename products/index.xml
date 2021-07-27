@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Products on quaether</title>
+    <link>https://quaether.com/products/</link>
+    <description>Recent content in Products on quaether</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://quaether.com/products/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bsq mini</title>
+      <link>https://quaether.com/products/bsq-mini/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://quaether.com/products/bsq-mini/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bsq neo</title>
+      <link>https://quaether.com/products/bsq-neo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://quaether.com/products/bsq-neo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
