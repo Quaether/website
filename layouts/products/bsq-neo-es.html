@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+<style>{{ readFile "static/css/bsq-mini.css" | safeCSS }}</style>
+<body style="background-color:#f0f0f0;">
+
+<!-- navbar responsive setting -->
+{{ partialCached "header-es.html" . .Params.enlink }}
+
+{{ partialCached "header-pic-es.html" . .Title .Params.seccion }}
+
+<body>
+<div class="row">
+  <div class="col-xl" style="text-align:center; padding-top: 50px;">
+    <img src="/images/housing-bubble.jpeg" alt="The BSQ Neo home protection" class="responsive-1" width=85% height=auto>
+    <h2  class= "section-title"><b> Hogar, dulce hogar </b></h2>
+    <h4 class= "description">El BSQ neo provee de una protección para tus espacios personales.
+      <br> Dicha protección contribuye a la renovación de energía y la reducción de la ansiedad que pudo haberse acumulado a lo largo del día. </h4>
+    </div>
+    <div class="col-xl">
+      <div class="col-xl" style="text-align:center; padding-top: 50px;">
+        <img src="/images/bsq-neoeffect.gif" alt="Human biofield" class="responsive-1" width=74% height=auto>
+        <h2  class= "section-title"><b> Disfruta de beneficios dobles </b></h2>
+        <h4 class= "description"> Su diseño incluye dos antenas las cuales se calibran para brindar un mayor rango de efectividad.
+          <br>Las antenas se eligen de forma complementaria, incentivando la resonancia entre los biocampos cercanos. </h4>
+      </div>
+    </div>
+    <div class="col-xl">
+      <div class="col-xl" style="text-align:center;padding-top: 50px;">
+        <img src="/images/bsq-work.jpg" alt="Human biofield" class="responsive-1" width=75% height=auto>
+        <h2  class= "section-title"> <b>El trabajo, tu segundo hogar </b></h2>
+        <h4 class= "description"> La rutina del trabajo puede representar un desgaste que afecta su biocampo.
+          <br>Manteniendo el BSQ neo cerca,  mejoran las relaciones interpersonales y se reduce la perdida de energía.</h4>
+      </div>
+    </div>
+</div>
+</body>
+
+{{ partialCached "contact-popup-es.html" . .Params.contactbutton }}
+
+{{ partialCached "footer-es.html" . }}
+
+</html>

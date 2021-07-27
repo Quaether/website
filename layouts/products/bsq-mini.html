@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<style>{{ readFile "static/css/bsq-mini.css" | safeCSS }}</style>
+<body style="background-color:#f0f0f0;">
+
+<!-- navbar responsive setting -->
+{{ partialCached "header.html" . .Params.eslink}}
+
+{{ partialCached "header-pic.html" . .Title }}
+
+<body>
+<div class="row">
+  <div class="col-xl" style="padding-top: 50px;">
+    <img src="/images/bsq-shield.jpg" alt="Human biofield" class="responsive-1" width=50% height=auto>
+    <div  class= "section-title"><b> Your personal protector</b> </div>
+    <div class= "description"> Unlike other models, the BSQ mini is designed to work
+      at a short distance in order to improve the resonance between the person's biofield and the surrounding environment. <br>The concept of environment
+      also includes the biofields of other people who are nearby. </div>
+    </div>
+    <div class="col-xl">
+      <div class="col-md" style="text-align:center;padding-top: 50px;">
+        <img src="/images/BSQ-MINI.gif" alt="Animation of BSQ Mini change of batteries" class="responsive-1" width=70% height=auto>
+        <div  class= "section-title"><b>Easy to switch batteries</b> </div>
+        <div class= "description">The BSQ mini has an intuitive lid system that slides out to access the batteries.
+          The device accepts both AA alkaline and AA rechargeable batteries.<br>The purchase of the BSQ mini includes a battery charger, via USB cable, and 4 rechargeable AA batteries,
+          giving the user the possibility of using it as soon as it is received. </div>
+      </div>
+    </div>
+    <div class="col-xl">
+      <div class="col-md" style="text-align:center;padding-top: 50px;">
+        <img src="/images/bsq-portable.png" alt="Carry the BSQ Mini in your bag and take it everywhere" class="responsive-1" width=69% height=auto>
+        <div  class= "section-title"><b> Make it part of your routine </b></div>
+        <div class= "description"> Its portable design allows it to be transported in a bag or
+          purse, providing users with long-lasting protection, whether they are traveling or doing any activity. </div>
+      </div>
+    </div>
+</div>
+</body>
+
+{{ partialCached "contact-popup.html" . .Params.contactbutton }}
+
+{{ partialCached "footer.html" . }}
+
+</html>

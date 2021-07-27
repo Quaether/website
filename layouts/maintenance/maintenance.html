@@ -1,0 +1,95 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script defer language="javascript" type="application/javascript"  src="{{ "/js/contact-popup.js" | urlize | relURL }}"></script>
+</head>
+
+<style>{{ readFile "static/css/green-block.css" | safeCSS }}</style>
+<style>{{ readFile "static/css/maintenance.css" | safeCSS }}</style>
+<body style="background-color:#f0f0f0;">
+
+
+<!-- navbar responsive setting -->
+{{ partialCached "header.html" . .Params.eslink}}
+
+{{ partialCached "header-pic.html" . .Title }}
+
+<body>
+<div class="row" style="margin: 5% auto;">
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Antenna Tuning</h3><br>
+            <p class="description">When environment conditions of the user change,
+              either related to their lifestyle or country issues, the biofield resonance can be suppressed, reducing the BSQ effect.
+            <br>BSQ tuning allows the user to fix the suppression without purchasing a new device.</p>
+        </div>
+    </div>
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Antenna exchange</h3><br>
+            <p class="description">In some cases, the biofield signal is not only suppressed, but also out of phase and consequently the antenna calibration becomes an ineffective solution.
+              <br>The antenna swap allows the user to reconnect with the technology, without the need to purchase a new device. </p>
+        </div>
+    </div>
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Hardware Repair</h3><br>
+            <p class="description">As an electronic device, the BSQ has many parts that can break or disconnect after long-term use.
+            <br> We offer long term support for all of our products, by providing advise to replace the power source locally, or instructions if you need to send it back for repairs.</p>
+          </div>
+    </div>
+</div>
+</body>
+
+
+<body onload="Captcha();">
+<main>
+   <div class="title">
+   <p id="title">Tell us your problem</p>
+  </div>
+   <form id="contactFrm" method= "post" action="https://formsubmit.co/ajax/support@quaether.com">
+
+     <label for="name" id="name-label" class="uno"></label>
+     <input type="text" name="name" id="name" placeholder="Enter your name" requiered>
+
+
+     <label for="email" id="email-label" class="uno"></label>
+     <input type="email" name="email"id="email" placeholder="Enter your email"  requiered>
+
+     <label for="dropdown" id="dropdown-label" class="uno"></label>
+     <select id="dropdown" name="rol">
+       <option disable selected value>Select the service requested</option>
+       <option value="tuning">Antenna Tunning</option>
+       <option value="switching">Antenna exchange</option>
+       <option value="repair">Hardware Repair</option>
+     </select>
+     <p class="uno"></p>
+     <textarea id="message" class="textarea uno" name="message" placeholder="Enter your message here"></textarea>
+     <p class="uno"></p>
+     <input type="text" class="form-control" style="margin-bottom: 0px; width: 200px; height: 40px; font-size: 24px; font-weight: bolder; text-decoration: line-through;text-align: center;display: inline-block; background-color: rgb(178, 0, 255, 0.3);" id="mainCaptcha" disabled="">
+     <br><button class="btn btn-success" type="button" style="display: inline-block;" id="refresh" onclick="Captcha();">Reset</button>
+     <div style="margin-top:10px; color: #D8000C; background-color: #FFBABA; border-radius: 7px;" id="log"></div>
+     <input style="margin-top:10px; width: 200px; height: 40px;" type="text" class="form-control" placeholder="Enter captcha" id="txtInput" required="">
+
+     <button type="submit" id="submit" class="submit uno">Submit</button>
+     <input type="hidden" name="_template" value="table">
+     <input type="hidden" name="_subject" value={{.Params.subject}}>
+
+   </form>
+  </div>
+</main>
+</body>
+
+<div class="alert alert-success" role="alert" id="success-alert" style= "display:none">
+  Your message has been sent, thank you for contacting us.
+</div>
+
+{{ partialCached "footer.html" . }}
+
+</html>

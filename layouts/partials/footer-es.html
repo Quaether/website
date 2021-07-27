@@ -1,0 +1,181 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<style>{{ readFile "static/css/footer.css" | safeCSS }}</style>
+
+<body class="fo">
+<footer class="footer">
+  <div class="footer__addr">
+    <h1 class="footer__logo"style="text-align:center"><img src="/images/quaether.png" style= "width:150px; height:150px;"></h1>
+
+    <address style="text-align:center">
+      La Pampa 2753 1er Piso,1428<br> Buenos Aires, Argentina <br>
+      (011) 54 9 4781-5453 <br><br>
+
+      <a class="footer__btn" style="text-align:center" href="mailto:info@quaether.com">Contáctenos</a>
+    </address>
+  </div>
+
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <h2 class="nav__title"><b>ACERCA DE</b></h2>
+
+      <ul class="nav__ul">
+        <li>
+          <a href="{{ "es/sobre/quaether" | relURL }}">Quaether</a>
+        </li>
+
+        <li>
+          <a href="{{ "es/sobre/tecnologia-bsq"| relURL }}">Tecnología BSQ</a>
+        </li>
+
+        <li>
+          <a href="{{ "es/sobre/codigos"| relURL }}">Códigos</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav__item">
+      <h2 class="nav__title"><b>PRODUCTOS</b></h2>
+
+      <ul class="nav__ul">
+      <li>
+        <a href="{{ "es/productos/bsq_mini"| relURL }}">BSQ Mini</a>
+      </li>
+
+      <li>
+        <a href="{{ "es/productos/bsq_neo"| relURL }}">BSQ Neo</a>
+      </li>
+    </ul>
+  </li>
+
+    <li class="nav__item">
+        <h2 class="nav__title"><a href="{{ "es/mantenimiento"| relURL }}"><b>MANTENIMIENTO</b></a></h2>
+        <h2 class="nav__title"><a href="{{ "es/blog"| relURL }}"><b>BLOG</b></a></h2>
+        <h2 class="nav__title"><a href="{{ "es/contacto"| relURL }}"><b>CONTACTO</b></a></h2>
+    </li>
+
+    <li class="nav__item">
+      <h2 class="nav__title"><b>LEGAL</b></h2>
+
+      <ul class="nav__ul" id= "myUL">
+        <li data-toggle="modal" data-target="#ppModal" data-whatever="Privacy">
+          <a> Política de Privacidad </a>
+        </li>
+
+        <li data-toggle="modal" data-target="#tcModal" data-whatever="Terms">
+          <a> Términos & Condiciones </a>
+        </li>
+
+        <li data-toggle="modal" data-target="#discModal" data-whatever="Disclaimer">
+          <a>Descargo de Responsabilidad</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="modal fade" id="ppModal"
+          tabindex="-1" role="dialog"
+          aria-labelledby="ppModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" style="color:black"
+                          id="ppModal">
+                          Politica de Privacidad
+                      </h5>
+                      <button type="button" class="close"
+                          data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                  </div>
+                  <div class="modal-main">
+                      <iframe class="legal-frame" src="/files/politica-privacidad.txt"></iframe>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class=
+                          "btn btn-secondary" data-dismiss="modal">
+                          Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal fade" id="tcmodal"
+          tabindex="-1" role="dialog"
+          aria-labelledby="tcModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" style="color:black"
+                          id="tcModal">
+                          Términos y Condiciones</h5>
+                      <button type="button" class="close"
+                          data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                  </div>
+                  <div class="modal-main">
+                    <iframe class="legal-frame" src="/files/terminos.txt"></iframe>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button"
+                          class="btn btn-secondary"
+                          data-dismiss="modal">
+                          Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal fade" id="discmodal"
+          tabindex="-1" role="dialog"
+          aria-labelledby="discModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" style="color:black"
+                          id="discmodal">
+                          Descargo de Responsabilidad
+                      </h5>
+                      <button type="button" class="close"
+                          data-dismiss="modal"
+                          aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                  </div>
+                  <div class="modal-main">
+                    <iframe class="legal-frame" src="/files/descargo.txt"></iframe>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button"
+                          class="btn btn-secondary"
+                          data-dismiss="modal">
+                          Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+  <hr class= "breakline">
+  <div class="copyright">
+    <p style= "text-align:center">&copy; 2021 Quaether. All rights reserved.</p>
+
+  </div>
+</footer>
+
+</body>
+</html>

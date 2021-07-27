@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<style>{{ readFile "static/css/bsq-mini.css" | safeCSS }}</style>
+<body style="background-color:#f0f0f0;">
+
+<!-- navbar responsive setting -->
+{{ partialCached "header-es.html" . .Params.enlink }}
+
+{{ partialCached "header-pic-es.html" . .Title .Params.seccion }}
+
+<body>
+<div class="row">
+  <div class="col-xl" style="padding-top: 50px;">
+    <img src="/images/bsq-shield.jpg" alt="Biocampo humano" class="responsive-1" width=50% height=auto>
+    <div  class= "section-title"><b> Tu protector personal </b> </div>
+    <div class= "description"> A diferencia de otros modelos, el BSQ mini está diseño para trabajar a corta distancia con el objetivo de mejorar la resonancia entre el biocampo
+      de la persona y  entorno en el que se encuentra presente. <br>El concepto de entorno también incluye los biocampos de otras personas que se sitúen cerca. </div>
+    </div>
+    <div class="col-xl">
+      <div class="col-md" style="text-align:center;padding-top: 50px;">
+        <img src="/images/BSQ-MINI.gif" alt="Animación del cambio de pilas" class="responsive-1" width=70% height=auto>
+        <div  class= "section-title"><b>Fácil de cambiar baterias</b> </div>
+        <div class= "description">El BSQ mini posee un sistema intuitivo de tapa que se desliza para acceder a las pilas.<br>El dispositivo admite tanto pilas AA alcalinas como AA recargables.
+          <br>La compra del BSQ mini incluye un cargador de pilas, mediante cable USB, y 4 pilas AA recargables dándole al usuario la posibilidad de utilizarlo ni bien lo recibe. </div>
+      </div>
+    </div>
+    <div class="col-xl">
+      <div class="col-md" style="text-align:center;padding-top: 50px;">
+        <img src="/images/bsq-portable.png" alt="Carry the BSQ Mini in your bag and take it everywhere" class="responsive-1" width=69% height=auto>
+        <div  class= "section-title"><b> Hazlo parte de tu rutina </b></div>
+        <div class= "description"> Su diseño portable permite transportarlo en un bolso o cartera, brindando a los usuarios una protección duradera, ya sea que estén
+          viajando o realizando alguna actividad.</div>
+      </div>
+    </div>
+</div>
+</body>
+
+{{ partialCached "contact-popup-es.html" . .Params.contactbutton }}
+
+{{ partialCached "footer-es.html" . }}
+
+</html>

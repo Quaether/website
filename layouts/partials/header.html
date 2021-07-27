@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<style>{{ readFile "static/css/header.css" | safeCSS }}</style>
+<script defer language="javascript" type="text/javascript"  src="{{ "/js/header.js" | urlize | relURL }}"></script>
+
+
+<body class="nav-body" style="background-color:#f0f0f0;">
+  <section class="nav-bar">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="/"><img src="/images/quaether-logo.png"></a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="/" class= "nav-font">Home</a>
+        </li>
+        <li>
+          <a class= "nav-font">About</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="{{ "about/quaether" | relURL }}"class= "nav-font">Quaether</a>
+            </li>
+            <li>
+              <a href="{{ "about/bsq-technology"| relURL }}"class= "nav-font">BSQ Technology</a>
+            </li>
+            <li>
+              <a href="{{ "about/coding"| relURL }}"class= "nav-font">Coding</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class= "nav-font">Products</a>
+			    <ul class="nav-dropdown">
+            <li>
+              <a href="{{ "products/bsq-mini"| relURL }}"class= "nav-font">BSQ Mini</a>
+            </li>
+            <li>
+                <a href="{{ "products/bsq-neo"| relURL }}"class= "nav-font">BSQ Neo</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="{{ "maintenance"| relURL }}"class= "nav-font">Maintenance</a>
+        </li>
+        <li>
+          <a href="{{ "blog"| relURL }}"class= "nav-font">Blog</a>
+        </li>
+        <li>
+          <a href="{{ "contact"| relURL }}"class= "nav-font">Contact</a>
+        </li>
+        <li>
+          <a href="{{ .Params.eslink | relURL }}" style="border-bottom:none;"><img class="flag" src="/images/es.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+</body>
+
+<body>
+</html>

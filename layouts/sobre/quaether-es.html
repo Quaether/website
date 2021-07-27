@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<style>{{ readFile "static/css/green-block.css" | safeCSS }}</style>
+<style>{{ readFile "static/css/quaether.css" | safeCSS }}</style>
+
+<body style="background-color:#f0f0f0;">
+
+<!-- navbar responsive setting -->
+{{ partialCached "header-es.html" .  .Params.enlink}}
+
+{{ partialCached "header-pic-es.html" . .Title .Params.seccion }}
+
+<body>
+<div class="row" style="margin: 5% auto;">
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Nuestra Misión </h3><br>
+            <p class="description">Ofrecer una tecnología innovadora, capaz de mejorar la relación de los clientes con el ambiente que los rodea.
+              <br>Nuestros productos están dirigidos a todo aquel que se vea afectado por factores externos, de forma directa o indirecta, cuyo resultado se traduce en una
+menor calidad de vida.<br><br></p>
+        </div>
+    </div>
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Nuestra Visión</h3><br>
+            <p class="description">Afianzarnos en el mercado nacional e internacional como la empresa líder en tecnología para el biocampo.
+              <br>Brindarle a los usuarios las herramientas para que puedan incluir la tecnología en sus actividades diarias.
+              <br>Continuar creando soluciones que se adapten a las necesidades de los clientes presentes y futuros. </p>
+        </div>
+    </div>
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Nuestros Valores</h3><br>
+            <p class="description">Comunicación clara y dinámica con los clientes y empleados, para entender sus necesidades.
+              <br>Desarrollo de productos de calidad con el fin de brindarle seguridad a nuestros clientes.
+              <br>Búsqueda de una mejora constante que beneficie los procesos de la empresa y optimice la atención a los clientes.</p>
+          </div>
+    </div>
+</div>
+</body>
+
+
+{{ partialCached "footer-es.html" . }}
+
+</html>

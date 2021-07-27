@@ -1,0 +1,95 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script defer language="javascript" type="application/javascript"  src="{{ "/js/contact-popup-es.js" | urlize | relURL }}"></script>
+</head>
+
+<style>{{ readFile "static/css/green-block.css" | safeCSS }}</style>
+<style>{{ readFile "static/css/maintenance.css" | safeCSS }}</style>
+<body style="background-color:#f0f0f0;">
+
+
+<!-- navbar responsive setting -->
+{{ partialCached "header-es.html" . .Params.enlink }}
+
+{{ partialCached "header-pic-es.html" . .Title .Params.seccion }}
+
+<body>
+<div class="row" style="margin: 5% auto;">
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Calibración de antena</h3><br>
+            <p class="description">Cuando cambian las condiciones ambientales del usuario,
+               ya sea relacionado con su estilo de vida o con problemas del país, la resonancia del biocampo se puede suprimir, reduciendo el efecto BSQ.
+             <br> El ajuste BSQ permite al usuario arreglar la supresión sin comprar un dispositivo nuevo. <br><br><br></p>
+        </div>
+    </div>
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Intercambio de antena</h3><br>
+            <p class="description">En algunos casos, la señal del biocampo no solo se suprime, sino que también se desfasa y en consecuencia la calibración de la antena se vuelve una solución inefectiva.
+              <br>El intercambio de antena permite al usuario volver a conectar con la tecnología, sin necesidad de adquirir un nuevo dispositivo.<br><br><br></p>
+        </div>
+    </div>
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Reparación del dispositivo</h3><br>
+            <p class="description">Como dispositivo electrónico, el BSQ tiene muchas partes que pueden romperse o desconectarse después de un uso prolongado.
+             <br> Por eso les ofrecemos soporte a largo plazo para todos nuestros productos, brindándole consejos para reemplazar la fuente de alimentación localmente o instrucciones si necesita enviarlos para su reparación. </p>
+          </div>
+    </div>
+</div>
+</body>
+
+
+<body onload="Captcha();">
+<main>
+   <div class="title">
+   <p id="title">Cuentanos tu problema</p>
+  </div>
+   <form id="contactFrm" method= "post" action="https://formsubmit.co/ajax/support@quaether.com">
+
+     <label for="name" id="name-label" class="uno"></label>
+     <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" requiered>
+
+
+     <label for="email" id="email-label" class="uno"></label>
+     <input type="email" name="email"id="email" placeholder="Ingresa tu email"  requiered>
+
+     <label for="dropdown" id="dropdown-label" class="uno"></label>
+     <select id="dropdown" name="rol">
+       <option disable selected value>Selecciona el servicio requerido</option>
+       <option value="tuning">Calibración de antena</option>
+       <option value="switching">Intercambio de Antena</option>
+       <option value="repair">Reparación del dispositivo</option>
+     </select>
+     <p class="uno"></p>
+     <textarea id="message" class="textarea uno" name="message" placeholder="Ingresa tu mensaje aqui"></textarea>
+     <p class="uno"></p>
+     <input type="text" class="form-control" style="margin-bottom: 0px; width: 200px; height: 40px; font-size: 24px; font-weight: bolder; text-decoration: line-through;text-align: center;display: inline-block; background-color: rgb(178, 0, 255, 0.3);" id="mainCaptcha" disabled="">
+     <br><button class="btn btn-success" type="button" style="display: inline-block;" id="refresh" onclick="Captcha();">Reset</button>
+     <div style="margin-top:10px; color: #D8000C; background-color: #FFBABA; border-radius: 7px;" id="log"></div>
+     <input style="margin-top:10px; width: 200px; height: 40px;text-align:center;" type="text" class="form-control" placeholder="Ingresa el captcha" id="txtInput" required="">
+
+     <button type="submit" id="submit" class="submit uno">Enviar</button>
+     <input type="hidden" name="_template" value="table">
+     <input type="hidden" name="_subject" value={{.Params.subject}}>
+
+   </form>
+  </div>
+</main>
+</body>
+
+<div class="alert alert-success" role="alert" id="success-alert" style= "display:none">
+  Tu mensaje ha sido enviado, gracias por contactarnos.
+</div>
+
+{{ partialCached "footer-es.html" . }}
+
+</html>

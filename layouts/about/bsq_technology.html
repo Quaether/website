@@ -1,0 +1,60 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<style>{{ readFile "static/css/bsq-technology.css" | safeCSS }}</style>
+<body style="background-color:#f0f0f0;">
+
+
+<!-- navbar responsive setting -->
+{{ partialCached "header.html" . .Params.eslink }}
+
+{{ partialCached "header-pic.html" . .Title }}
+
+<body>
+<div class="row">
+  <div class="col-xl-6" style="text-align:center; margin:6% auto;">
+    <img src="/images/human-em-field.png" alt="Human biofield" class="responsive-2" style= "width:80%; height:auto">
+  </div>
+    <div class="col-xl-6">
+    <h3 class= "font2" style= "color:#181a18; text-align:justify; margin: 12% auto; width: 80%;"> People emit constant radiation, creating a biological field that protects them, and promotes exchange with the environment.
+      <br><br>To maintain the biofield, it needs a feedback with the environment, otherwise the person will only be able to consume its internal energy.
+      <br><br>When someone cannot recover their internal energy at the same speed that they consume it, side effects such as illnesses and mood swings occur.
+      <br><br>The technology is responsible for modifying the person's environment so that its biofield is capable of absorbing free energy in
+      the environment instead of consuming your own.</h3>
+    </div>
+</div>
+</body>
+
+<body>
+<div class="image">
+    <img src="/images/bsq-signal.jpg" alt="BSQ signal representation"width=100% height=auto>
+    <div class="text">
+       <div class= "font" style= "color:#39deb5;text-transform: uppercase;text-align:center;"> The entire product line has antennas that are calibrated to generate the best resonance with the customer and the surrounding environment </div>
+    </div>
+</div>
+</body>
+
+<body>
+<div class="row flex-column-reverse flex-xl-row">
+  <div class="col-xl-6">
+    <h3 class= "font2" style= "color:#181a18; text-align:justify; margin: 12% auto; width: 80%;"> Unlike other biofield related devices, BSQ technology does not use electromagnetic signals.
+      <br><br>The signals captured and emitted are of quantum origin. <br><br>That means they do not interfere with other electronic devices and their actions are focused on the environment, not individuals. </h3>
+  </div>
+  <div class="col-xl-6" style="text-align:center; margin:3% auto;padding-top:20px;">
+    <img src="/images/wave-particle.jpg" alt="Quantum wave signal.Credits:pngtree.com" class="responsive-1" width=80% height=auto>
+  </div>
+</div>
+</body>
+
+
+{{ partialCached "footer.html" . }}
+
+</html>

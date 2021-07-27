@@ -1,0 +1,162 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+<style>{{ readFile "static/css/coding.css" | safeCSS }}</style>
+<body style="background-color:#f0f0f0;">
+
+<!-- navbar responsive setting -->
+{{ partialCached "header.html" . .Params.eslink }}
+
+{{ partialCached "header-pic.html" . .Title }}
+
+<body>
+<div class="container" style= "padding-top: 50px;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="main-timeline">
+                <div class="timeline">
+                    <a href="#" class="timeline-content">
+
+                        <p class="description">
+                          The technology has two modes of operation:
+                          <br>AUTOMATIC: Interacts with the energies of the environment, generating free quantum particles.
+                          <br>FOCUSED: The user uses a code to direct the resonance towards a specific end.
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline">
+                    <a href="#" class="timeline-content">
+                        <p class="description">
+                          The use of codes is a mental exercise that does not require additional technology.
+                          <br>The user only needs to link the concepts of the code with the problem they are trying to solve.
+                          <br>The more broad the thought behind the code, the more chances of seeing an effect.
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline">
+                    <a href="#" class="timeline-content">
+
+                        <p class="description">
+                          To build a code it is necessary to link the concepts of the scheme forming a closed chain.
+                          <br>Connection lines must be respected since not all concepts are related to each other.
+                          <br>The codes can be applied both to the user of the device and to another person with whom they have a close mental bond.
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline">
+                    <a href="#" class="timeline-content">
+
+                        <p class="description">
+                          When the user sends a code, a resonance is generated between the receiving biofield and the message transmitted by the signal.
+                          <br>The response is usually perceived as a 'butterfly effect' and not as the acceptance of an order
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<body>
+<div class="row">
+  <div class="col-xl" style="text-align:center; margin:6% auto; padding-top:50px;">
+    <img src="/images/coding-card.png" alt="Diagram of the function card used to program the BSQ" class="responsive" width=77% height=auto>
+  </div>
+    <div class="col-xl">
+      <div class="row">
+          <div class="col" style="text-align:center; margin:35% auto;">
+              <div class="vertical-tab" role="tabpanel">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                     <li role="presentation"><a href="#Section1" aria-controls="home" role="tab-1" data-toggle="tab">FUNCTION</a></li>
+                      <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab-2" data-toggle="tab">TRANSFORMATION</a></li>
+                      <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab-3" data-toggle="tab">REACTION</a></li>
+                      <li role="presentation"><a href="#Section4" aria-controls="messages" role="tab-4" data-toggle="tab">NEO</a></li>
+                      <li role="presentation"><a href="#Section5" aria-controls="messages" role="tab-5" data-toggle="tab">WORK</a></li>
+                      <li role="presentation"><a href="#Section6" aria-controls="messages" role="tab-6" data-toggle="tab">MEMORY</a></li>
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content tabs">
+                      <div role="tab-1" class="tab-pane fade in active" id="Section1">
+                          <h3>FUNCTION</h3><br>
+                          <h4>Represents the action we want to achieve with the code.
+                            <br><br>Like a mathematical equation, it depends on other concepts to complete the operands and obtain the result.</h4>
+                      </div>
+                      <div role="tab-2" class="tab-pane fade" id="Section2">
+                          <h3>TRANSFORMATION</h3><br>
+                          <h4>It is applied when it is necessary to change some element of the situation.
+                            <br><br>Unlike work, it is a natural process that is triggered by the individual's own free will.</h4>
+                      </div>
+                      <div role="tab-3" class="tab-pane fade" id="Section3">
+                          <h3>REACTION</h3><br>
+                          <h4>Each modification induced by the codes generates a percentage of rejection by the biofield.
+                            <br><br>Including the concept of reaction in the code reduces this rejection and increases the chances of success. </h4>
+                      </div>
+                      <div role="tab-4" class="tab-pane fade"  id="Section4">
+                          <h3>NEO</h3><br>
+                          <h4>They are the products that result from new combinations with the environment.
+                            <br><br>It is applied when problems cannot be solved by modifying existing elements. For example, when seeking to generate new ideas. </h4>
+                      </div>
+                      <div role="tab-5" class="tab-pane fade"  id="Section5">
+                          <h3>WORK</h3><br>
+                          <h4>Represents the physical or mental work that the individual must perform to achieve the objective.
+                            <br><br>It is related to the transformation of ideas into forces capable of modifying the environment. </h4>
+                      </div>
+                      <div role="tab-6" class="tab-pane fade"  id="Section6">
+                          <h3>MEMORY</h3><br>
+                          <h4>It is responsible for storing physical (fat) and abstract (experiences) elements within the body.
+                            <br><br>It needs to be included in your code so that it remains effective without the need to implement it on a daily basis. </h4>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    </div>
+</body>
+
+<script>
+
+  $(".nav-tabs").on('click', 'li', function () {
+    $(".nav-tabs li.active").removeClass("active");
+    // adding classname 'active' to current click li
+    $(this).addClass("active");
+});
+</script>
+
+<body>
+<div container>
+    <div class="row" style= "padding-top:50px">
+    <div class="col-md-6" style="text-align:center; padding-top: 50px;background:linear-gradient(to top, #009900 -2%, #339933 100%); width:100%; height: 300px;">
+      <h3 class="font1" style= "color:#f0f0f0" ><b> Printable Code card </b> </h3>
+      <br><br>
+      <a href="/files/BSQ-CODE-CARD.pdf" alt= "Printable function card for BSQ codes" download>
+      <img src="/images/pdf.png" alt="Pdf icon to dowload files" class="responsive-icon" width=100px height=100px>
+      </a>
+     </div>
+     <br><br>
+    <div class="col-md-6" style="text-align:center;padding-top: 50px;background:linear-gradient(to top, #009900 -2%, #339933 100%); width:100%; height: 300px;">
+      <h3 class="font1" style= "color:#f0f0f0"><b> Explanation + example codes</b> </h3>
+      <br><br>
+      <a href="/files/BSQ-CODE-INFO.pdf" alt= "Coding explanation and a list of examples" download>
+      <img src="/images/pdf.png" alt="Pdf icon to dowload files" class="responsive-icon" width=100px height=100px>
+      </a>
+     </div>
+     <br><br>
+    </div>
+  </div>
+</body>
+
+{{ partialCached "footer.html" . }}
+
+</html>

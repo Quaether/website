@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+<style>{{ readFile "static/css/bsq-mini.css" | safeCSS }}</style>
+<body style="background-color:#f0f0f0;">
+
+<!-- navbar responsive setting -->
+{{ partialCached "header.html" . .Params.eslink  }}
+
+{{ partialCached "header-pic.html" . .Title }}
+
+<body>
+<div class="row">
+  <div class="col-xl" style="text-align:center; padding-top: 50px;">
+    <img src="/images/housing-bubble.jpeg" alt="The BSQ Neo home protection" class="responsive-1" width=80% height=auto>
+    <h2  class= "section-title"><b> Home, sweet home </b></h2>
+    <h4 class= "description"> The BSQ neo provides protection for your personal
+      spaces. <br>This protection contributes to the renewal of energy and the reduction of anxiety that may have accumulated throughout the day.  </h4>
+    </div>
+    <div class="col-xl">
+      <div class="col-xl" style="text-align:center; padding-top: 50px;">
+        <img src="/images/bsq-neoeffect.gif" alt="Human biofield" class="responsive-1" width=70% height=auto>
+        <h2  class= "section-title"><b> Enjoy double field benefits </b></h2>
+        <h4 class= "description"> Its design includes two antennas which are calibrated to provide a greater range of effectiveness.
+          <br>The antennas are chosen in a complementary way, encouraging resonance between nearby biofields.  </h4>
+      </div>
+    </div>
+    <div class="col-xl">
+      <div class="col-xl" style="text-align:center;padding-top: 50px;">
+        <img src="/images/bsq-work.jpg" alt="Human biofield" class="responsive-1" width=75% height=auto>
+        <h2  class= "section-title"> <b>Work, your second home </b></h2>
+        <h4 class= "description"> The work routine can generate a stress that affects your biofield.
+          <br>Keeping the BSQ neo close, improves interpersonal relationships and reduces energy loss.</h4>
+      </div>
+    </div>
+</div>
+</body>
+
+{{ partialCached "contact-popup.html" . .Params.contactbutton }}
+
+{{ partialCached "footer.html" . }}
+
+</html>

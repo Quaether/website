@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<style>{{ readFile "static/css/green-block.css" | safeCSS }}</style>
+<style>{{ readFile "static/css/quaether.css" | safeCSS }}</style>
+
+<body style="background-color:#f0f0f0;">
+
+<!-- navbar responsive setting -->
+{{ partialCached "header.html" . .Params.eslink}}
+
+{{ partialCached "header-pic.html" . .Title }}
+
+<body>
+<div class="row" style="margin: 5% auto;">
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Our Mision </h3><br>
+            <p class="description">Offer an innovative technology, capable of improving the relationship between customers and the environment that surrounds them. <br>
+              Our products are aimed at anyone who is affected by external factors, directly or indirectly, which reduce their life quality.<br><br></p>
+        </div>
+    </div>
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Our Vision</h3><br>
+            <p class="description">Establish ourselves in the national and international market as the leading company in bio-field technology. <br>
+              Provide users with the tools so that they can include technology in their daily activities. <br> Continue developing solutions suitable for the needs of present and future customers. </p>
+        </div>
+    </div>
+    <div class="col-xl-3"style="margin: 5% auto;">
+        <div class="serviceBox">
+            <h3 class="title">Our Values</h3><br>
+            <p class="description">Clear and dynamic communication with customers and employees, to understand their needs.<br>
+              Development of quality products in order to provide security to our customers. <br> Search for constant improvement that benefits the company's processes and optimizes customer service.</p>
+          </div>
+    </div>
+</div>
+</body>
+
+
+{{ partialCached "footer.html" . }}
+
+</html>

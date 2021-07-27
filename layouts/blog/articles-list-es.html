@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<style>{{ readFile "static/css/articles-list.css" | safeCSS }}</style>
+
+<!-- navbar responsive setting -->
+{{ partialCached "header-es.html" . .Params.enlink}}
+
+<div class="row" style="height:30%;">
+</div>
+
+{{ range .Pages.GroupByParam "spanish"}}
+{{ range sort .Pages ".Params.setdate" }}
+<div class="blog-card">
+  <div class="meta">
+    <div class="photo" style="background-image: url({{ with .Params.img }}{{ . }}{{ end }})"></div>
+    <ul class="details">
+      <li class="date">{{.Params.setdate}}</li>
+      <li class="tags">
+        <ul>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="description">
+    <h1>{{ .Page.Title }}</h1>
+    <h2></h2>
+    <p> {{ .Params.description }}</p>
+    <p class="read-more">
+      <a href="{{ .Permalink }}">Read More</a>
+    </p>
+  </div>
+</div>
+{{end}}
+{{end}}
+
+<div class="pagination-wrapper">
+  <div class="pagination justify-content-center">
+    <a class="prev page-numbers" href="javascript:;">prev</a>
+    <span aria-current="page" class="page-numbers current">1</span>
+    <a class="page-numbers">2</a>
+    <a class="page-numbers">3</a>
+    <a class="next page-numbers">next</a>
+  </div>
+</div>
+
+
+<div class="row" style="height:20%;">
+</div>
+
+{{ partialCached "subscribe-es.html" . }}
+{{ partialCached "footer-es.html" . }}
+
+</html>

@@ -1,0 +1,304 @@
+/* fonts used on the navbar*/
+
+.font1 {
+	font-family:'Roboto' , sans-serif;
+  font-weight : 500;
+	font-size: 1.2em;
+}
+
+.font2 {
+	font-family:'Roboto' , sans-serif;
+  font-weight : 400;
+}
+
+.intro-title{
+	font-size: 3em;
+}
+
+.intro{
+	font-size: 2em;
+}
+
+@media only screen and (max-width:798px){
+    .intro-title{
+			font-size: 2em;
+		}
+		.intro{
+			font-size: 1.1em;
+		}
+
+}
+
+.titulo-alerta
+{
+  color: #424242;
+  font-size: 18px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.aviso {
+  width: 300px;
+  padding: 15px;
+  background-color: #fff;
+  color: #000;
+  border-right: 4px solid #4A8333;
+  font-family: 'open sans', sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	position: fixed;
+	z-index: 4;
+
+ }
+
+.boton-cerrar:hover {
+  background: orange;
+  padding: 12px;
+}
+
+
+.boton-cerrar {
+  background: #4A8333;
+  padding: 8px;
+  margin-left: 15px;
+  color: #fff;
+  font-weight: bold;
+  float: right;
+  font-size: 30px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.no_bullet{
+	list-style: none;
+ 	padding: 0;
+ 	margin: 0;
+}
+
+
+hr .bookends {
+  border: 0;
+  margin: 1em auto;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
+}
+
+.bookends {
+  position: relative;
+  border-width: 6px;
+  border-color: hsl(120,100%,25%,0.3) transparent;
+  height: 7px;
+  border-style: double;
+  width: 30%;
+	margin-bottom: 2%;
+	margin-top: 1.5%;
+}
+
+
+/* this is our container. Lets imagine, that it is our sidebar where we want to put testimonials */
+.tsl-container {
+  position: relative;
+}
+
+
+/* Slides */
+.mySlides {
+ 	border:2px solid  #dadada;
+	padding:1em;
+  box-shadow: 5px 5px 5px grey;
+	width: 40%;
+	margin-left: 30%;
+	margin-bottom: 1.5%;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: green;
+}
+
+
+/* Add an italic font style to all quotes */
+q {
+font-family:'Roboto' , sans-serif;
+font-weight : 400;
+font-size: 16px;
+color: black;
+}
+
+/* Add a blue color to the author */
+.author {color: #00b300;text-align: center;}
+
+@media only screen and (max-width: 378px){
+	.mySlides {
+		width:70%;
+		margin-left:3%;
+	}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.video-col{
+	padding-bottom: 50px;
+}
+.video-responsive {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	}
+
+
+/*News cards*/
+.news-container{
+	width:80%;
+	margin-left: 10%;
+	padding-bottom: 2%;
+}
+.news .news-image{
+    position: relative;
+    text-align: center;
+}
+.news img{
+    width: 100%;
+    height: auto;
+}
+
+.news .news-info{
+	background: #dedede;
+  padding: 30px 25px;
+}
+.news .description{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 30px;
+    padding: 40px 50px;
+    opacity: 0;
+    background-color: rgba(68, 128, 64, 0.8);
+    transition: all 0.5s ease 0s;
+}
+.news:hover .description{
+    opacity: 1;
+}
+.news .social{
+    padding: 10px 0 0 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 40px;
+    left: -27px;
+    background: #60c259;
+    text-align: center;
+    transform: translate(25px, 0px) rotateY(90deg);
+    transition: all 0.5s ease 0s;
+}
+.news:hover .social{
+    transform: translate(0px, 0px) rotateY(0deg);
+}
+.news .social li{
+    display: block;
+    margin-bottom: 10px;
+}
+.news .social li a{
+    display: block;
+    width: 40px;
+    height: 35px;
+    font-size: 17px;
+    color: #fff;
+    line-height: 30px;
+    transition: all 0.5s ease 0s;
+}
+.news .social li a:hover{
+    color: #3b336a;
+}
+.news .team-info{
+    padding: 20px;
+}
+.news .title{
+    font-size: 18px;
+    color: #3b336a;
+    letter-spacing: 2px;
+    margin: 0 0 15px 0;
+    transition: all 0.5s ease 0s;
+}
+
+.news .title:hover{
+    color: #368230;
+}
+
+.news .read{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 8px 8px 8px 50px;
+    background: #60c259;
+    z-index: 1;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+.news .read:hover{
+    background: #368230;
+    text-decoration: none;
+    color: #000;
+}
+.news .read:after{
+    content: "";
+    width: 36px;
+    height: 100%;
+    background: #60c259;
+    position: absolute;
+    top: 0;
+    right: -18px;
+    transform: skewX(-45deg);
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.news .read:hover:after{
+    background: #368230;
+}
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 30px; }
+}
+@media only screen and (max-width: 767px){
+    .our-team .social{ left: -20px; }
+}
+@media only screen and (max-width: 480px){
+    .our-team .social{ left: -20px; }
+}

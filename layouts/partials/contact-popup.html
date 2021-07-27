@@ -1,0 +1,64 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>{{ readFile "static/css/contact-popup.css" | safeCSS }}</style>
+  <script defer language="javascript" type="application/javascript"  src="{{ "/js/contact-popup.js" | urlize | relURL }}"></script>
+</head>
+
+<body onload="Captcha()">
+  <div class= "contact-container">
+  <button id="mbtn" class="btn button green turned-button">{{.Params.contactbutton}}</button>
+  </div>
+  <div id="modalDialog" class="modal">
+    <div class="modal-content animate-top">
+        <div class="modal-header">
+            <h5 class="modal-title">Leave us a message</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <form method="post" id="contactFrm" action="https://formsubmit.co/ajax/info@quaether.com">
+        <div class="modal-body">
+            <!-- Form submission status -->
+            <div class="response"></div>
+
+            <!-- Contact form -->
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required="">
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required="">
+            </div>
+            <div class="form-group">
+                <label>Message:</label>
+                <textarea name="message" id="message" class="form-control" placeholder="Share your thoughts" rows="6" required=""></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <input type="text" class="form-control" style="margin-bottom: 0px;width: 200px; height: 40px; font-size: 24px; font-weight: bolder; text-decoration: line-through;text-align: center;display: inline-block; background-color: rgb(178, 0, 255, 0.3);" id="mainCaptcha" disabled="">
+          <button class="btn btn-success" type="button" style="margin-bottom: 10px;display: inline-block;" id="refresh" onclick="Captcha();">Reset</button>
+          <div style="margin-top:10px; color: #D8000C; background-color: #FFBABA; border-radius: 7px;" id="log"></div>
+          <input style="margin-top:10px; width: 200px; height: 40px;" type="text" class="form-control" placeholder="Enter captcha" id="txtInput" required="">
+            <!-- Submit button -->
+          <button type="submit" class="button green submit" style= "margin-left: 20%;">Submit</button>
+
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value={{.Params.subject}}>
+        </div>
+        </form>
+    </div>
+</div>
+</body>
+<div class="alert alert-success" role="alert" id="success-alert" style= "display:none">
+  Your message has been sent, thank you for contacting us.
+</div>
+</html>
