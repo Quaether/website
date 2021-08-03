@@ -10,6 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>{{ readFile "static/css/contact-popup.css" | safeCSS }}</style>
   <script defer language="javascript" type="application/javascript"  src="{{ "/js/contact-popup-es.js" | urlize | relURL }}"></script>
+  <script src="dist/xss-filters.min.js"></script>
 </head>
 
 <body onload="Captcha()">

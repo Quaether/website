@@ -35,7 +35,7 @@ h4 {
 }
 
 .subscribe-bg{
-	background: linear-gradient(45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/images/subscribe-bg.jpg") center center / cover no-repeat;
+	background: linear-gradient(45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/images/subscribe-bg.webp") center center / cover no-repeat;
   background-repeat: no-repeat;
 	width: auto; /*or your image's width*/
 	height: auto; /*or your image's height*/
