@@ -22,6 +22,7 @@
 
 {{ range .Pages.GroupByParam "english"}}
 {{ range sort .Pages ".Params.setdate" }}
+{{ $title := .Title }}
 {{ $url := printf "%s" .Permalink }}
 <div class="blog-card">
   <div class="meta">
