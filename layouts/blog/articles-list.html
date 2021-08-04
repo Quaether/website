@@ -22,6 +22,7 @@
 
 {{ range .Pages.GroupByParam "english"}}
 {{ range sort .Pages ".Params.setdate" }}
+{{ $url := printf "%s" .Permalink }}
 <div class="blog-card">
   <div class="meta">
     <div class="photo" style="background-image: url({{ with .Params.img }}{{ . }}{{ end }})"></div>
