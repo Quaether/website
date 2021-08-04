@@ -29,7 +29,6 @@
       <li class="date">{{.Params.setdate}}</li>
       <li class="tags">
         <ul>
-          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
           <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}&quote={{ .Title }}%20-%20{{ .Site.Title }}" target="_blank" title="Share on Facebook" style="display:inline-block;vertical-align:middle;width:2em;height:2em;border-radius:50%;box-shadow:.1em .1em 0.5em rgba(0,0,0,.3);background:#3b5998;"></i></a></li>
           <li><a href="https://twitter.com/intent/tweet/?text={{ .Title }}&amp;url={{ .Permalink }}&via=stephenajulu&amp;hashtags={{ .Params.tags }}" target="_blank" title="Tweet on Twitter" style="display:inline-block;vertical-align:middle;width:2em;height:2em;border-radius:50%;box-shadow:.1em .1em 0.5em rgba(0,0,0,.3);background:#1b95e0;"><i class="fa fa-twitter"></i></a></li>
           <li><a href="https://pinterest.com/pin/create/button/?url={{.Permalink}}&amp;media={{ .Params.hero | absURL }}&amp;description={{.Description}}" target="_blank" title="Pin on Pinterest" style="display:inline-block;vertical-align:middle;width:2em;height:2em;border-radius:50%;box-shadow:.1em .1em 0.5em rgba(0,0,0,.3);background:#E60023;"><i class="fa fa-pinterest-p"></i></a></li>
