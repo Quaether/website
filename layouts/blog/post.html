@@ -17,6 +17,8 @@
 
 <!-- navbar responsive setting -->
 {{ partialCached "header.html" . .Params.eslink}}
+{{ $title := .Title }}
+{{ $url := printf "%s" .Permalink }}
 
 <div class= "filler" style="width:100%; height:12em; background-color: #f0f0f0"></div>
 
@@ -26,10 +28,9 @@
         <div class="col-xl">
             <div class="postBox">
               <div class="iconBar">
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-facebook-f"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                <a href="http://www.facebook.com/sharer.php?u={{ $url }}" class="facebook" aria-label="share on Facebook"><i class="fa fa-facebook-f"></i></a>
+                <a href="http://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with .Site.Social.twitter }}{{ . }}{{ end }}" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="http://pinterest.com/pin/create/button/?url={{ $url }}&description={{ $title }}"><i class="fa fa-pinterest-p"></i></a>
               </div>
                 <img src={{.Params.img}} class= "post-img">
                 <h3 class="title">{{.Title}}</h3>

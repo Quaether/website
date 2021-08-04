@@ -29,13 +29,6 @@
     <div class="photo" style="background-image: url({{ with .Params.img }}{{ . }}{{ end }})"></div>
     <ul class="details">
       <li class="date">{{.Params.setdate}}</li>
-      <li class="tags">
-        <ul>
-          <li><a href="http://www.facebook.com/sharer.php?u={{ $url }}" class="facebook" aria-label="share on Facebook"><i class="fa fa-facebook-f"></i></a></li>
-          <li><a href="http://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with .Site.Social.twitter }}{{ . }}{{ end }}" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="http://pinterest.com/pin/create/button/?url={{ $url }}&description={{ $title }}"><i class="fa fa-pinterest-p"></i></a></li>
-        </ul>
-      </li>
     </ul>
   </div>
   <div class="description">
