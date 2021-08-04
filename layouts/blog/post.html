@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="icon" href="/images/tablogo.ico">
   <title> Quaether-BSQ technology to fortify your biofield</title>
+  <meta property="og:title"         content={{.Page.Title}} />
+  <meta property="og:description"   content={{.Params.description}}/>
+  <meta property="og:image"         content={{.Params.img}} />
 </head>
 
 <style>{{ readFile "static/css/post.css" | safeCSS }}</style>
@@ -19,8 +22,6 @@
 {{ partialCached "header.html" . .Params.eslink}}
 {{ $title := .Page.Title }}
 {{ $url := printf "%s" .Permalink }}
-{{ $og:title := .Page.Title }}
-{{ $og:image := .Params.img }}
 
 <div class= "filler" style="width:100%; height:12em; background-color: #f0f0f0"></div>
 
