@@ -14,6 +14,7 @@
   <meta property="og:title"         content={{.Page.Title}} />
   <meta property="og:description"   content={{.Params.description}}/>
   <meta property="og:image"         content={{.Params.img}} />
+  <meta name="twitter:card" content="summary"></meta>
 </head>
 
 <style>{{ readFile "static/css/post.css" | safeCSS }}</style>
@@ -33,8 +34,9 @@
             <div class="postBox">
               <div class="iconBar">
                 <a href="https://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn facebook"><i class="fa fa-facebook-f"></i></a>
-                <a href="http://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with .Site.Social.twitter }}{{ . }}{{ end }}" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a>
-                <a href="http://www.pinterest.com/pin/create/button/?url={{ $url}}&media={{ $image }}&description={{ .Params.description }}" class="pin-it-button" count-layout="horizontal" id="pinterest" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+                <a href="http://twitter.com/share?url={{ $url }}" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="http://www.pinterest.com/pin/create/button/?url={{ $url }}&media={{ $image }}&description={{ .Params.description }}" class="pin-it-button" count-layout="horizontal" id="pinterest" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+                <a href="https://wa.me/?text={{ $url }}"><i class="fa fa-whatsapp"></i></a>
               </div>
                 <img src={{.Params.img}} class= "post-img">
                 <h3 class="title">{{.Title}}</h3>
