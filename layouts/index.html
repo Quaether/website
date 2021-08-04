@@ -32,6 +32,12 @@
 
 <!-- navbar responsive setting -->
 
+{{ $title := .Page.Title }}
+{{ $url := printf "%s" .Permalink }}
+{{ $image := .Params.imgsocial}}
+{{ $comment := "Read this article from Quaether" }}
+
+
 <div class="aviso">
     <span class="boton-cerrar" onclick="this.parentElement.style.display='none';">&times;</span>
   <h1 class="titulo-alerta">By remaining in this site you agree to our  Terms & Conditions and Privacy Policy </a></h1>
