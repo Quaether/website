@@ -17,7 +17,7 @@
 
 <!-- navbar responsive setting -->
 {{ partialCached "header.html" . .Params.eslink}}
-{{ $title := .Title }}
+{{ $title := .Page.Title }}
 {{ $url := printf "%s" .Permalink }}
 
 <div class= "filler" style="width:100%; height:12em; background-color: #f0f0f0"></div>
