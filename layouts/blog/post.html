@@ -11,14 +11,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="icon" href="/images/tablogo.ico">
   <title> Quaether-BSQ technology to fortify your biofield</title>
+  {{ $title := .Page.Title }}
+  {{ $url := printf "%s" .Permalink }}
+  {{ $og:title := .Page.Title }}
+  {{ $og:image := .Params.img }}
 </head>
 
 <style>{{ readFile "static/css/post.css" | safeCSS }}</style>
 
 <!-- navbar responsive setting -->
 {{ partialCached "header.html" . .Params.eslink}}
-{{ $title := .Page.Title }}
-{{ $url := printf "%s" .Permalink }}
 
 <div class= "filler" style="width:100%; height:12em; background-color: #f0f0f0"></div>
 
@@ -28,7 +30,7 @@
         <div class="col-xl">
             <div class="postBox">
               <div class="iconBar">
-                <a href="https://www.facebook.com/sharer.php?u={{ $url }}&p[title]={{ $title }}" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn facebook"><i class="fa fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/sharer.php?u={{ $url }" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn facebook"><i class="fa fa-facebook-f"></i></a>
                 <a href="http://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with .Site.Social.twitter }}{{ . }}{{ end }}" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a>
                 <a href="http://pinterest.com/pin/create/button/?url={{ $url }}&description={{ $title }}"><i class="fa fa-pinterest-p"></i></a>
               </div>
