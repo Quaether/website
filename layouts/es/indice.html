@@ -141,7 +141,7 @@
                     {{ end }}
 
                     <ul class="social">
-                      {{range (where .Paginator.Pages ".Params.top1"  "true")}}
+                      {{range (where .Paginator.Pages ".Params.estop1"  "true")}}
                       <meta property="og:title"         content={{.Page.Title}} />
                       <meta property="og:description"   content={{.Params.description}}/>
                       <meta property="og:image"         content={{.Params.img}} />
@@ -181,7 +181,7 @@
                       </p>
                     {{ end }}
                     <ul class="social">
-                      {{range (where .Paginator.Pages ".Params.top2"  "true")}}
+                      {{range (where .Paginator.Pages ".Params.estop2"  "true")}}
                       <meta property="og:title"         content={{.Page.Title}} />
                       <meta property="og:description"   content={{.Params.description}}/>
                       <meta property="og:image"         content={{.Params.img}} />
@@ -221,7 +221,7 @@
                       </p>
                     {{ end }}
                     <ul class="social">
-                      {{range (where .Paginator.Pages ".Params.top3"  "true")}}
+                      {{range (where .Paginator.Pages ".Params.estop3"  "true")}}
                       <meta property="og:title"         content={{.Page.Title}} />
                       <meta property="og:description"   content={{.Params.description}}/>
                       <meta property="og:image"         content={{.Params.img}} />
