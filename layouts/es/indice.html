@@ -132,39 +132,25 @@
         <div class="col-xl">
             <div class="news">
                 <div class="news-image">
-                    {{range (where .Paginator.Pages ".Params.estop1"  "true")}}
+                  {{ range where .Site.Pages ".Params.estop1"  "true"}}
                       <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
                     {{ end }}
-
                     <ul class="social">
-                      {{range (where .Paginator.Pages ".Params.estop1"  "true")}}
-                      <meta property="og:title"         content={{.Page.Title}} />
-                      <meta property="og:description"   content={{.Params.description}}/>
-                      <meta property="og:image"         content={{.Params.img}} />
-                      <meta name="twitter:card" content="summary_large_image" />
-                      <meta name="twitter:title" content={{.Page.Title}} />
-                      <meta name="twitter:description" content={{.Params.description}} />
-                      <meta name="twitter:image" content={{.Params.img}} />
-                      {{ $title := .Page.Title }}
-                      {{ $url := printf "%s" .Permalink }}
-                      {{ $image := .Params.imgsocial}}
-                      {{ $comment := "Read this article from Quaether" }}
-                      <li><a href="https://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-btn facebook"><i class="fa fa-facebook-f"></i></a></li>
-                      <li><a href="https://twitter.com/intent/tweet?text={{ $comment }}&url={{ $url }}" target="_blank"  rel="noopener noreferrer" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="http://www.pinterest.com/pin/create/button/?url={{ $url }}&media={{ $image }}&description={{ .Params.description }}" class="pin-it-button" count-layout="horizontal" id="pinterest" target="_blank" rel="noopener noreferrer"><i class="fa fa-pinterest-p"></i></a></li>
-                      <li><a href="https://wa.me/?text={{ $url }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a></li>
-                      {{ end }}
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
                     </ul>
                 </div>
                 <div class="news-info">
-                  {{range (where .Paginator.Pages ".Params.estop1"  "true")}}
+                    {{ range where .Site.Pages ".Params.estop1"  "true"}}
                     <h3 class="title">{{ .Page.Title }}</h3>
                   {{ end }}
                 </div>
-                  {{range (where .Paginator.Pages ".Params.estop1"  "true")}}
+                    {{ range where .Site.Pages ".Params.estop1"  "true"}}
                   <a href="{{ .Permalink }}" class="read">READ MORE</a>
                 {{ end }}
             </div>
@@ -173,39 +159,25 @@
         <div class="col-xl">
             <div class="news">
                 <div class="news-image">
-                    {{range (where .Paginator.Pages ".Params.estop2"  "true")}}
+                      {{ range where .Site.Pages ".Params.estop2"  "true"}}
                       <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
                     {{ end }}
                     <ul class="social">
-                      {{range (where .Paginator.Pages ".Params.estop2"  "true")}}
-                      <meta property="og:title"         content={{.Page.Title}} />
-                      <meta property="og:description"   content={{.Params.description}}/>
-                      <meta property="og:image"         content={{.Params.img}} />
-                      <meta name="twitter:card" content="summary_large_image" />
-                      <meta name="twitter:title" content={{.Page.Title}} />
-                      <meta name="twitter:description" content={{.Params.description}} />
-                      <meta name="twitter:image" content={{.Params.img}} />
-                      {{ $title := .Page.Title }}
-                      {{ $url := printf "%s" .Permalink }}
-                      {{ $image := .Params.imgsocial}}
-                      {{ $comment := "Read this article from Quaether" }}
-                      <li><a href="https://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-btn facebook"><i class="fa fa-facebook-f"></i></a></li>
-                      <li><a href="https://twitter.com/intent/tweet?text={{ $comment }}&url={{ $url }}" target="_blank"  rel="noopener noreferrer" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="http://www.pinterest.com/pin/create/button/?url={{ $url }}&media={{ $image }}&description={{ .Params.description }}" class="pin-it-button" count-layout="horizontal" id="pinterest" target="_blank" rel="noopener noreferrer"><i class="fa fa-pinterest-p"></i></a></li>
-                      <li><a href="https://wa.me/?text={{ $url }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a></li>
-                      {{ end }}
-                    </ul>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
                     </ul>
                 </div>
                 <div class="news-info">
-                  {{range (where .Paginator.Pages ".Params.estop2"  "true")}}
+                    {{ range where .Site.Pages ".Params.estop2"  "true"}}
                     <h3 class="title">{{ .Page.Title }}</h3>
                   {{ end }}
                 </div>
-                {{range (where .Paginator.Pages ".Params.estop2"  "true")}}
+                  {{ range where .Site.Pages ".Params.estop2"  "true"}}
                   <a href="{{ .Permalink }}" class="read">READ MORE</a>
                 {{ end }}
             </div>
@@ -214,45 +186,32 @@
         <div class="col-xl">
             <div class="news">
                 <div class="news-image">
-                    {{range (where .Paginator.Pages ".Params.estop3"  "true")}}
+                      {{ range where .Site.Pages ".Params.estop3"  "true"}}
                       <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
                     {{ end }}
                     <ul class="social">
-                      {{range (where .Paginator.Pages ".Params.estop3"  "true")}}
-                      <meta property="og:title"         content={{.Page.Title}} />
-                      <meta property="og:description"   content={{.Params.description}}/>
-                      <meta property="og:image"         content={{.Params.img}} />
-                      <meta name="twitter:card" content="summary_large_image" />
-                      <meta name="twitter:title" content={{.Page.Title}} />
-                      <meta name="twitter:description" content={{.Params.description}} />
-                      <meta name="twitter:image" content={{.Params.img}} />
-                      {{ $title := .Page.Title }}
-                      {{ $url := printf "%s" .Permalink }}
-                      {{ $image := .Params.imgsocial}}
-                      {{ $comment := "Read this article from Quaether" }}
-                      <li><a href="https://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-btn facebook"><i class="fa fa-facebook-f"></i></a></li>
-                      <li><a href="https://twitter.com/intent/tweet?text={{ $comment }}&url={{ $url }}" target="_blank"  rel="noopener noreferrer" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="http://www.pinterest.com/pin/create/button/?url={{ $url }}&media={{ $image }}&description={{ .Params.description }}" class="pin-it-button" count-layout="horizontal" id="pinterest" target="_blank" rel="noopener noreferrer"><i class="fa fa-pinterest-p"></i></a></li>
-                      <li><a href="https://wa.me/?text={{ $url }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a></li>
-                      {{ end }}
-                    </ul>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
                     </ul>
                 </div>
                 <div class="news-info">
-                  {{range (where .Paginator.Pages ".Params.estop3"  "true")}}
+                    {{ range where .Site.Pages ".Params.estop3"  "true"}}
                     <h3 class="title">{{ .Page.Title }}</h3>
                   {{ end }}
                 </div>
-                {{range (where .Paginator.Pages ".Params.estop3"  "true")}}
+                  {{ range where .Site.Pages ".Params.estop3"  "true"}}
                   <a href="{{ .Permalink }}" class="read">READ MORE</a>
                 {{ end }}
             </div>
         </div>
     </div>
 </div>
+
 
 {{ partialCached "subscribe-es.html" . }}
 
