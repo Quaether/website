@@ -71,7 +71,7 @@
 				var $ytFrame = $(e);
 				var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
 				var $ytLoader = $('<div class="ytLoader">');
-				$ytLoader.append($('<img class= "cover" style="width: 840px; height: 500px;" src="/images/video-1.webp">'));
+				$ytLoader.append($('<img class= "cover" style="width: 840px; height: 500px;" src="/images/video-1b.webp">'));
 				$ytLoader.data('$ytFrame',$ytFrame);
 				$ytFrame.replaceWith($ytLoader);
 				$ytLoader.click(function () {
@@ -88,7 +88,7 @@
     <div class="font1 intro-title" style= "color:#f0f0f0; padding-top:50px;"><b> How can i use the Codes with the BSQ?</b> </div>
     <iframe width="840" height="500" src="https://www.youtube.com/embed/9badzzCr_Nw" frameborder="0" allowfullscreen class="c large aligncenter"></iframe>
     <script>
-    function youTubes_makeDynamic2() {
+    function youTubes_makeDynamic() {
 			var $ytIframes = $('iframe[src*="youtube.com"]');
 			$ytIframes.each(function (i,e) {
 				var $ytFrame = $(e);
@@ -104,7 +104,7 @@
 				});
 			});
 		};
-		$(document).ready(function () {youTubes_makeDynamic2()});
+		$(document).ready(function () {youTubes_makeDynamic()});
 	</script>
   </div>
 </div>
