@@ -77,8 +77,8 @@ function youTubes_makeDynamic() {
     var $ytFrame = $(e);
     var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
     var $ytLoader = $('<div class="ytLoader">');
-    $ytLoader.append($('<img class= "cover" style="width: 840px; height: 500px; position: relative;" src="https://i.ytimg.com/vi/'+ytKey+'/hqdefault.jpg">'));
-    $ytLoader.append($('<img class="playBtn" style="width: 100px; height: 100px;" src="/images/play_button.png">'));
+    $ytLoader.append($('<img class= "cover" style="width: 840px; height: 500px; z-index: 1;" src="https://i.ytimg.com/vi/'+ytKey+'/hqdefault.jpg">'));
+    $ytLoader.append($('<img class="playBtn" style="width: 100px; height: 100px; z-index: 2;" src="/images/play_button.png">'));
     $ytLoader.data('$ytFrame',$ytFrame);
     $ytFrame.replaceWith($ytLoader);
     $ytLoader.click(function () {
