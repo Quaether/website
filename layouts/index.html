@@ -37,7 +37,7 @@
 <body>
 <div class="row" style= "margin:4% auto;">
   <div class="col-xl" style="text-align:center; padding-top:3%;">
-    <img src="/images/homepage_welcome.webp" alt="Header" class="welcome" width=806px height=806px>
+    <img src="/images/homepage_welcome.webp" alt="Header" class="responsive welcome" width=806px height=806px>
   </div>
   <div class="col-xl">
     <br><br>
@@ -61,11 +61,15 @@
 <div class="row">
   <div class="col-xl-6 video-col" style="text-align:center; background:linear-gradient(to top, #009900 -2%, #339933 100%);">
     <div class="font1 intro-title" style= "color:#f0f0f0; padding-top:50px;" ><b> How does the BSQ technology work?</b> </div>
-    <iframe width="840" height="500" src="https://www.youtube.com/embed/Q2QmuwoDkGo" frameborder="0" allowfullscreen class="c large aligncenter"></iframe>
+    <div class="video-responsive">
+    <iframe src="https://www.youtube.com/embed/Q2QmuwoDkGo" frameborder="0" allowfullscreen></iframe>
+    </div>
   </div>
   <div class="col-xl-6 video-col" style="text-align:center; background:linear-gradient(to top, #009900 -2%, #339933 100%);">
     <div class="font1 intro-title" style= "color:#f0f0f0; padding-top:50px;"><b> How can i use the Codes with the BSQ?</b> </div>
-    <iframe width="840" height="500" src="https://www.youtube.com/embed/9badzzCr_Nw" frameborder="0" allowfullscreen class="c large aligncenter"></iframe>
+    <div class="video-responsive">
+    <iframe src="https://www.youtube.com/embed/9badzzCr_Nw" frameborder="0" allowfullscreen></iframe>
+    </div>
   </div>
 </div>
 <script>
@@ -75,8 +79,8 @@ function youTubes_makeDynamic() {
     var $ytFrame = $(e);
     var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
     var $ytLoader = $('<div class="ytLoader">');
-    $ytLoader.append($('<img class= "cover" style="width: 840px; height: 550px; position: relative;" src="https://i.ytimg.com/vi/'+ytKey+'/hqdefault.jpg">'));
-    $ytLoader.append($('<img class="playBtn" style="width: 100px; height: 100px; position: absolute; top: 350px; left: 450px;" src="/images/play_button.png">'));
+    $ytLoader.append($('<img class= "cover" src="https://i.ytimg.com/vi/'+ytKey+'/hqdefault.jpg">'));
+    $ytLoader.append($('<img class="playBtn" src="/images/play_button.png">'));
     $ytLoader.data('$ytFrame',$ytFrame);
     $ytFrame.replaceWith($ytLoader);
     $ytLoader.click(function () {

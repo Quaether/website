@@ -26,10 +26,6 @@
 		.intro{
 			font-size: 1.1em;
 		}
-		.welcome{
-			height: auto;
-			width: 40%;
-		}
 
 }
 
@@ -174,14 +170,15 @@ color: black;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
+	width: 50%;
 }
 .video-responsive iframe, .video-responsive object, .video-responsive embed {
+	height: 100%;
+	left: 0;
 	position: absolute;
 	top: 0;
-	left: 0;
 	width: 100%;
-	height: 100%;
-	}
+}
 
 
 /*News cards*/
