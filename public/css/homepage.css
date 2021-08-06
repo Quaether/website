@@ -166,21 +166,32 @@ color: black;
 	padding-bottom: 50px;
 }
 .video-responsive {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
 	height: 0;
-	width: 50%;
-}
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+	margin: 2% auto;
+	}
 .video-responsive iframe, .video-responsive object, .video-responsive embed {
 	height: 100%;
 	left: 0;
 	position: absolute;
 	top: 0;
 	width: 100%;
-}
+	}
 
+	.cover{
+		position: relative;
+		width: 85%;
+	}
 
+	.playBtn{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 10%;
+	}
 /*News cards*/
 .news-container{
 	width:80%;

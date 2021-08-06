@@ -7,7 +7,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -267,14 +266,12 @@ article {
 </html>
 
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <link rel="checkmark" type="image/svg+xml" href="images/check-mark.svg"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="icon" href="/images/4343.ico">
   <title> Quaether-BSQ technology to fortify your biofield</title>
 
@@ -448,20 +445,32 @@ color: black;
 	padding-bottom: 50px;
 }
 .video-responsive {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
 	height: 0;
-}
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+	margin: 2% auto;
+	}
 .video-responsive iframe, .video-responsive object, .video-responsive embed {
+	height: 100%;
+	left: 0;
 	position: absolute;
 	top: 0;
-	left: 0;
 	width: 100%;
-	height: 100%;
 	}
 
+	.cover{
+		position: relative;
+		width: 85%;
+	}
 
+	.playBtn{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 10%;
+	}
 /*News cards*/
 .news-container{
 	width:80%;
@@ -598,15 +607,14 @@ color: black;
   See the Legal section on the footer for more information.
 </div>
 
-
-<img src="/images/header.webp" alt="Header" class="responsive" width=100% height=auto>
+<div class="headerimg"> <img src= "/images/header.webp" width=100%></div>
 
 </body>
 
 <body>
 <div class="row" style= "margin:4% auto;">
   <div class="col-xl" style="text-align:center; padding-top:3%;">
-    <img src="/images/homepage_welcome.webp" alt="Header" class="responsive" width=90% height=auto>
+    <img src="/images/homepage_welcome.webp" alt="Header" class="welcome" width=90%>
   </div>
   <div class="col-xl">
     <br><br>
@@ -631,16 +639,36 @@ color: black;
   <div class="col-xl-6 video-col" style="text-align:center; background:linear-gradient(to top, #009900 -2%, #339933 100%);">
     <div class="font1 intro-title" style= "color:#f0f0f0; padding-top:50px;" ><b> How does the BSQ technology work?</b> </div>
     <div class="video-responsive">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q2QmuwoDkGo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-   </div>
+    <iframe src="https://www.youtube.com/embed/Q2QmuwoDkGo" frameborder="0" allowfullscreen></iframe>
+    </div>
   </div>
   <div class="col-xl-6 video-col" style="text-align:center; background:linear-gradient(to top, #009900 -2%, #339933 100%);">
     <div class="font1 intro-title" style= "color:#f0f0f0; padding-top:50px;"><b> How can i use the Codes with the BSQ?</b> </div>
     <div class="video-responsive">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/9badzzCr_Nw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-   </div>
+    <iframe src="https://www.youtube.com/embed/9badzzCr_Nw" frameborder="0" allowfullscreen></iframe>
+    </div>
   </div>
 </div>
+<script>
+function youTubes_makeDynamic() {
+  var $ytIframes = $('iframe[src*="youtube.com"]');
+  $ytIframes.each(function (i,e) {
+    var $ytFrame = $(e);
+    var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
+    var $ytLoader = $('<div class="ytLoader">');
+    $ytLoader.append($('<img class= "cover" src="https://i.ytimg.com/vi/'+ytKey+'/hqdefault.jpg">'));
+    $ytLoader.append($('<img class="playBtn" src="/images/play_button.png">'));
+    $ytLoader.data('$ytFrame',$ytFrame);
+    $ytFrame.replaceWith($ytLoader);
+    $ytLoader.click(function () {
+      var $ytFrame = $ytLoader.data('$ytFrame');
+      $ytFrame.attr('src',$ytFrame.attr('src')+'?autoplay=1');
+      $ytLoader.replaceWith($ytFrame);
+    });
+  });
+};
+$(document).ready(function () {youTubes_makeDynamic()});
+</script>
 </body>
 <br><br>
 
@@ -687,6 +715,7 @@ color: black;
 
           </div>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     	
       <hr class="bookends">
     </div>
@@ -700,10 +729,7 @@ color: black;
                     
 
                     <ul class="social">
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                      
                     </ul>
                 </div>
                 <div class="news-info">
@@ -718,10 +744,8 @@ color: black;
                 <div class="news-image">
                     
                     <ul class="social">
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                      
+                    </ul>
                     </ul>
                 </div>
                 <div class="news-info">
@@ -736,10 +760,8 @@ color: black;
                 <div class="news-image">
                     
                     <ul class="social">
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                      
+                    </ul>
                     </ul>
                 </div>
                 <div class="news-info">
@@ -756,14 +778,12 @@ color: black;
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <link rel="checkmark" type="image/svg+xml" href="images/check-mark.svg"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </head>
 
@@ -1029,7 +1049,6 @@ svg > .checkmark-check {
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
