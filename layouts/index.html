@@ -71,7 +71,7 @@
 				var $ytFrame = $(e);
 				var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
 				var $ytLoader = $('<div class="ytLoader">');
-				$ytLoader.append($('<img class= "cover" style="width: 840px; height: 500px;" src="/images/video-1b.webp">'));
+				$ytLoader.append($('<img class= "cover img1" style="width: 840px; height: 500px;" src="/images/video-1b.webp">'));
 				$ytLoader.data('$ytFrame',$ytFrame);
 				$ytFrame.replaceWith($ytLoader);
 				$ytLoader.click(function () {
@@ -94,7 +94,7 @@
 				var $ytFrame = $(e);
 				var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
 				var $ytLoader = $('<div class="ytLoader">');
-				$ytLoader.append($('<img class= "cover" style="width: 840px; height: 500px;" src="/images/video-2b.webp">'));
+				$ytLoader.append($('<img class= "cover img2" style="width: 840px; height: 500px;" src="/images/video-2b.webp">'));
 				$ytLoader.data('$ytFrame',$ytFrame);
 				$ytFrame.replaceWith($ytLoader);
 				$ytLoader.click(function () {
