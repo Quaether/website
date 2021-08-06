@@ -4,6 +4,7 @@
 <head>
   {{ partialCached "header.html" . .Params.eslink }}
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <link rel="checkmark" type="image/svg+xml" href="images/check-mark.svg"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -146,7 +147,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                     {{range (where .Paginator.Pages ".Params.top1"  "true")}}
-                      <img style= "width: 950px; height: 634px;"src={{.Params.img}}>
+                      <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
@@ -187,7 +188,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                     {{range (where .Paginator.Pages ".Params.top2"  "true")}}
-                      <img style= "width: 950px; height: 634px;"src={{.Params.img}}>
+                      <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
@@ -228,7 +229,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                     {{range (where .Paginator.Pages ".Params.top3"  "true")}}
-                      <img style= "width: 950px; height: 634px;"src={{.Params.img}}>
+                      <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
