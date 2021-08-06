@@ -29,7 +29,7 @@
   Vea la sección legal al pie de página para más información.
 </div>
 
-<img src="/images/header-es.webp" alt="Header" class="responsive" width=806px height=806px>
+<img src="/images/header-es.webp" alt="Header" class="welcome" width=806px height=806px>
 
 </body>
 
@@ -153,7 +153,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                   {{ range where .Site.Pages ".Params.estop1"  "true"}}
-                      <img width= 200 height= 100 src={{.Params.img}}>
+                      <img style="width:200px;height:100px;" src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
@@ -193,7 +193,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                       {{ range where .Site.Pages ".Params.estop2"  "true"}}
-                      <img width= 200 height= 100 src={{.Params.img}}>
+                      <img style="width:200px;height:100px;" src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
@@ -233,7 +233,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                       {{ range where .Site.Pages ".Params.estop3"  "true"}}
-                      <img width= 200 height= 100 src={{.Params.img}}>
+                      <img style="width:200px;height:100px;" src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
