@@ -63,37 +63,45 @@
 <div class="row">
   <div class="col-xl-6 video-col" style="text-align:center; background:linear-gradient(to top, #009900 -2%, #339933 100%);">
     <div class="font1 intro-title" style= "color:#f0f0f0; padding-top:50px;" ><b> How does the BSQ technology work?</b> </div>
-    <div class="video-responsive">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/Q2QmuwoDkGo" frameborder="0" allowfullscreen class="c large aligncenter"></iframe>
-   </div>
+    <div id="videoplayer1" style="display:none;">
+    <object width="800" height="700">
+    <param name="movie" value="http://www.youtube.com/v/Q2QmuwoDkGo?fs=1&hl=en_US&rel=0&autoplay=1"></param>
+    <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
+    <embed src="http://www.youtube.com/v/Q2QmuwoDkGo?fs=1&hl=en_US&rel=0&autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="1280" height="745"></embed>
+    </object>
+
+    </div>
+
+
+    <img src="/images/video-1.png" id="image1ID" />
+    <script type="text/javascript">
+    $('#image1ID').click(function() {
+    $('#videoplayer1').show();
+    $('#image1ID').hide();
+    });
+    </script>
   </div>
   <div class="col-xl-6 video-col" style="text-align:center; background:linear-gradient(to top, #009900 -2%, #339933 100%);">
     <div class="font1 intro-title" style= "color:#f0f0f0; padding-top:50px;"><b> How can i use the Codes with the BSQ?</b> </div>
-    <div class="video-responsive">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/9badzzCr_Nw" frameborder="0" allowfullscreen class="c large aligncenter"></iframe>
-   </div>
+    <div id="videoplayer2" style="display:none;">
+    <object width="800" height="700">
+    <param name="movie" value="http://www.youtube.com/v/9badzzCr_Nw?fs=1&hl=en_US&rel=0&autoplay=1"></param>
+    <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
+    <embed src="http://www.youtube.com/v/9badzzCr_Nw?fs=1&hl=en_US&rel=0&autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="1280" height="745"></embed>
+    </object>
+
+    </div>
+
+
+    <img src="/images/video-2.png" id="image2ID" />
+    <script type="text/javascript">
+    $('#image2ID').click(function() {
+    $('#videoplayer2').show();
+    $('#image2ID').hide();
+    });
+    </script>
   </div>
 </div>
-<script>
-		function youTubes_makeDynamic() {
-			var $ytIframes = $('iframe[src*="youtube.com"]');
-			$ytIframes.each(function (i,e) {
-				var $ytFrame = $(e);
-				var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
-				var $ytLoader = $('<div class="ytLoader">');
-				$ytLoader.append($('<img class="cover" src="https://i.ytimg.com/vi/'+ytKey+'/hqdefault.jpg">'));
-				$ytLoader.append($('<i class="fa fa-play"></i>'));
-				$ytLoader.data('$ytFrame',$ytFrame);
-				$ytFrame.replaceWith($ytLoader);
-				$ytLoader.click(function () {
-					var $ytFrame = $ytLoader.data('$ytFrame');
-					$ytFrame.attr('src',$ytFrame.attr('src')+'?autoplay=1');
-					$ytLoader.replaceWith($ytFrame);
-				});
-			});
-		};
-		$(document).ready(function () {youTubes_makeDynamic()});
-	</script>
 </body>
 <br><br>
 
