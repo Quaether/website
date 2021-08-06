@@ -36,7 +36,7 @@
 <body>
 <div class="row" style= "margin:4% auto;">
   <div class="col-xl" style="text-align:center; padding-top:3%;">
-    <img src="/images/homepage_welcome.webp" alt="Header" class="welcome" width=806px height=806px>
+    <img src="/images/homepage_welcome.webp" alt="Header" class="responsive welcome" width=806px height=806px>
   </div>
   <div class="col-xl">
     <br><br>
@@ -153,7 +153,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                   {{ range where .Site.Pages ".Params.estop1"  "true"}}
-                      <img style="width:480px;height:300px;" src={{.Params.img}}>
+                      <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
@@ -193,7 +193,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                       {{ range where .Site.Pages ".Params.estop2"  "true"}}
-                      <img style="width:480px;height:300px;" src={{.Params.img}}>
+                      <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
@@ -233,7 +233,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                       {{ range where .Site.Pages ".Params.estop3"  "true"}}
-                      <img style="width:480px;height:300px;" src={{.Params.img}}>
+                      <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>

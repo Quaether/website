@@ -27,8 +27,8 @@
 			font-size: 1.1em;
 		}
 		.welcome{
-			height: 400px;
-			width: 400px;
+			height: auto;
+			width: 40%;
 		}
 
 }

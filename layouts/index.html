@@ -146,7 +146,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                     {{range (where .Paginator.Pages ".Params.top1"  "true")}}
-                      <img style="width:480px;height:300px;" src={{.Params.img}}>
+                      <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
@@ -187,7 +187,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                     {{range (where .Paginator.Pages ".Params.top2"  "true")}}
-                    <img style="width:480px;height:300px;" src={{.Params.img}}>
+                    <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
@@ -228,7 +228,7 @@ $(document).ready(function () {youTubes_makeDynamic()});
             <div class="news">
                 <div class="news-image">
                     {{range (where .Paginator.Pages ".Params.top3"  "true")}}
-                      <img style="width:480px;height:300px;" src={{.Params.img}}>
+                      <img src={{.Params.img}}>
                       <p class="description">
                           {{ .Params.description }}
                       </p>
