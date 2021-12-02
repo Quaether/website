@@ -43,11 +43,10 @@ h4 {
 	padding: 0;
 }
 
-.subscribe-container {
+.container {
   text-align: center;
-  margin: 5em auto;
   padding: 2em;
-  width: 90%;
+  width: 80%;
   max-width: 480px;
 }
 

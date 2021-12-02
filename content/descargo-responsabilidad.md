@@ -1,0 +1,18 @@
+---
+title: "Descargo de Responsabilidad"
+enlink: "../disclaimer"
+type: "sobre"
+layout: "legal-es"
+draft: false
+---
+Cada individuo posee un biocampo único con la capacidad de absorber o repeler las energías del entorno. La repulsión del biocampo se conoce como reacción y varía según la disonancia.
+La tecnología BSQ actúa sobre el entorno, generando cuantos libres capaces de ser asimilados por los biocampos. En virtud de lo mencionado, la empresa Quaether® no se hace responsable de las reacciones generadas por los individuos cercanos.
+
+Los instrumentos capaces de generar señales electromagnéticas (EM) de media o alta potencia, pueden afectar la señal de los dispositivos BSQ, reduciendo su efectividad. Tampoco se debe colocar los dispositivos en lugares expuestos al sol cuando las temperaturas superen los 35°C.
+La empresa Quaether® no se hace responsable de por posibles fluctuaciones o perturbaciones generadas por sistemas  mecánicos o ambientales situados en el espacio  o  ambiente donde opera la tecnología.
+
+La Empresa le entrega a cada Usuario la tecnologías e información sobre la forma de uso.
+El Usuario se compromete  a No utilizar la tecnología en forma contraria a las leyes vigentes. No es un aparato terapéutico, No puede utilizarse en reemplazo de indicaciones médicas o de  medicamentos indicados por el profesional tratante.
+Quaether® no se responsabiliza del mal uso de la tecnología en dichos casos.
+
+El envio se realizará mediante una empresa de courier y el valor del invoice adjuntado, se ajustará para reducir los impuestos locales que deba pagar el comprador.

@@ -19,7 +19,7 @@ body .nav-body {
 
 .brand {
   position: absolute;
-  padding-left: 20px;
+	left: 60px;
   float: left;
 	z-index: 1;
 }
@@ -133,6 +133,7 @@ nav ul li ul li a {
   }
  .brand a img {
  max-height: 100px;
+ 	left: 60px;
  }
 
  .flag{
