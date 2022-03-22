@@ -37,7 +37,7 @@ body .fo {
 }
 
 .footer__logo {
-  font-family: 'Roboto', cursive;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
 }
@@ -49,7 +49,7 @@ body .fo {
 }
 
 .nav__title {
-	font-family: 'Roboto', cursive;
+	font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;
 }

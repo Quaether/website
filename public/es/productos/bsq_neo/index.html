@@ -7,8 +7,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="icon" href="favicon.ico?v=1" type="image/x-icon"/>
-  <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon"/>
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+  <link rel="manifest" href="/icon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <title> Quaether- BSQ Neo device </title>
 </head>
 
@@ -60,13 +75,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
 <style>/* fonts used on the navbar*/
 
 .nav-font{
-	font-family: 'Roboto', cursive;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	font-size: 1.05em;
 }
@@ -84,7 +100,7 @@ body .nav-body {
 
 .brand {
   position: absolute;
-  padding-left: 20px;
+	left: 60px;
   float: left;
 	z-index: 1;
 }
@@ -198,6 +214,7 @@ nav ul li ul li a {
   }
  .brand a img {
  max-height: 100px;
+ 	left: 60px;
  }
 
  .flag{
@@ -258,7 +275,6 @@ article {
 </style>
 <script defer language="javascript" type="text/javascript"  src="/js/header.js"></script>
 
-
 <body class="nav-body" style="background-color:#f0f0f0;">
   <section class="nav-bar">
   <div class="nav-container">
@@ -269,7 +285,7 @@ article {
       <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
       <ul class="nav-list">
         <li>
-          <a href="/es/" class= "nav-font">Inicio</a>
+          <a href="/es/" class="nav-font">Inicio</a>
         </li>
         <li>
           <a class= "nav-font">Acerca de</a>
@@ -281,7 +297,7 @@ article {
               <a href="/es/sobre/tecnologia-bsq"class= "nav-font">Tecnología BSQ</a>
             </li>
             <li>
-              <a href="/es/sobre/codigos"class= "nav-font">Códigos</a>
+              <a href="/es/sobre/codigos"class= "nav-font">Codigos</a>
             </li>
           </ul>
         </li>
@@ -306,15 +322,16 @@ article {
           <a href="/es/contacto"class= "nav-font">Contacto</a>
         </li>
         <li>
-          <a href="/../products/bsq-neo"style="border-bottom:none;"><img class="flag" src="/images/gb.webp"></a>
+          <a href="/../products/bsq-neo" style="border-bottom:none;"><img class="flag" src="/images/gb.webp"></a>
         </li>
       </ul>
     </nav>
   </div>
 </section>
+
 </body>
 
-<body>
+
 </html>
 
 
@@ -631,7 +648,7 @@ body .fo {
 }
 
 .footer__logo {
-  font-family: 'Roboto', cursive;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
 }
@@ -643,7 +660,7 @@ body .fo {
 }
 
 .nav__title {
-	font-family: 'Roboto', cursive;
+	font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;
 }
@@ -801,110 +818,20 @@ hr.breakline {
       <h2 class="nav__title"><b>LEGAL</b></h2>
 
       <ul class="nav__ul" id= "myUL">
-        <li data-toggle="modal" data-target="#ppModal" data-whatever="Privacy">
-          <a> Política de Privacidad </a>
+        <li>
+          <a href="/politica-privacidad"> Política de Privacidad </a>
         </li>
 
-        <li data-toggle="modal" data-target="#tcModal" data-whatever="Terms">
-          <a> Términos & Condiciones </a>
+        <li>
+          <a href="/terminosycondiciones"> Términos & Condiciones </a>
         </li>
 
-        <li data-toggle="modal" data-target="#discModal" data-whatever="Disclaimer">
-          <a>Descargo de Responsabilidad</a>
+        <li>
+          <a href="/descargo-responsabilidad">Descargo de Responsabilidad</a>
         </li>
       </ul>
     </li>
   </ul>
-
-  <div class="modal fade" id="ppModal"
-          tabindex="-1" role="dialog"
-          aria-labelledby="ppModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" style="color:black"
-                          id="ppModal">
-                          Politica de Privacidad
-                      </h5>
-                      <button type="button" class="close"
-                          data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
-                  </div>
-                  <div class="modal-main">
-                      <iframe class="legal-frame" src="/files/politica-privacidad.txt"></iframe>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class=
-                          "btn btn-secondary" data-dismiss="modal">
-                          Close
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="modal fade" id="tcmodal"
-          tabindex="-1" role="dialog"
-          aria-labelledby="tcModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" style="color:black"
-                          id="tcModal">
-                          Términos y Condiciones</h5>
-                      <button type="button" class="close"
-                          data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
-                  </div>
-                  <div class="modal-main">
-                    <iframe class="legal-frame" src="/files/terminos.txt"></iframe>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button"
-                          class="btn btn-secondary"
-                          data-dismiss="modal">
-                          Close
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="modal fade" id="discmodal"
-          tabindex="-1" role="dialog"
-          aria-labelledby="discModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" style="color:black"
-                          id="discmodal">
-                          Descargo de Responsabilidad
-                      </h5>
-                      <button type="button" class="close"
-                          data-dismiss="modal"
-                          aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
-                  </div>
-                  <div class="modal-main">
-                    <iframe class="legal-frame" src="/files/descargo.txt"></iframe>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button"
-                          class="btn btn-secondary"
-                          data-dismiss="modal">
-                          Close
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>
-
 
   <hr class= "breakline">
   <div class="copyright">

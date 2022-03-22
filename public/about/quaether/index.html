@@ -6,8 +6,23 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link rel="icon" href="favicon.ico?v=1" type="image/x-icon"/>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+  <link rel="manifest" href="/icon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <title> Quaether- About the company</title>
 </head>
 
@@ -165,13 +180,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
 <style>/* fonts used on the navbar*/
 
 .nav-font{
-	font-family: 'Roboto', cursive;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	font-size: 1.05em;
 }
@@ -189,7 +205,7 @@ body .nav-body {
 
 .brand {
   position: absolute;
-  padding-left: 20px;
+	left: 60px;
   float: left;
 	z-index: 1;
 }
@@ -303,6 +319,7 @@ nav ul li ul li a {
   }
  .brand a img {
  max-height: 100px;
+ 	left: 60px;
  }
 
  .flag{
@@ -363,7 +380,6 @@ article {
 </style>
 <script defer language="javascript" type="text/javascript"  src="/js/header.js"></script>
 
-
 <body class="nav-body" style="background-color:#f0f0f0;">
   <section class="nav-bar">
   <div class="nav-container">
@@ -417,9 +433,9 @@ article {
     </nav>
   </div>
 </section>
+
 </body>
 
-<body>
 </html>
 
 
@@ -562,7 +578,7 @@ body .fo {
 }
 
 .footer__logo {
-  font-family: 'Roboto', cursive;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
 }
@@ -574,7 +590,7 @@ body .fo {
 }
 
 .nav__title {
-	font-family: 'Roboto', cursive;
+	font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;
 }
@@ -731,111 +747,21 @@ hr.breakline {
     <li class="nav__item">
       <h2 class="nav__title"><b>LEGAL</b></h2>
 
-      <ul class="nav__ul" id= "myUL">
-        <li data-toggle="modal" data-target="#ppModal" data-whatever="Privacy">
-          <a> Privacy Policy </a>
+      <ul class="nav__ul">
+        <li>
+        <a href="/privacy-policy"> Privacy Policy </a>
         </li>
 
-        <li data-toggle="modal" data-target="#tcModal" data-whatever="Terms">
-          <a> Terms & Conditions </a>
+        <li>
+          <a href="/terms-of-service"> Terms & Conditions </a>
         </li>
 
-        <li data-toggle="modal" data-target="#discModal" data-whatever="Disclaimer">
-          <a>Disclaimer</a>
+        <li>
+          <a href="/disclaimer"> Disclaimer</a>
         </li>
       </ul>
     </li>
   </ul>
-
-  <div class="modal fade" id="ppModal"
-          tabindex="-1" role="dialog"
-          aria-labelledby="ppModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" style="color:black"
-                          id="ppModal">
-                          Privacy Policy
-                      </h5>
-                      <button type="button" class="close"
-                          data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
-                  </div>
-                  <div class="modal-main">
-                      <iframe class="legal-frame" src="/files/privacy-policy.txt"></iframe>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class=
-                          "btn btn-secondary" data-dismiss="modal">
-                          Close
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="modal fade" id="tcmodal"
-          tabindex="-1" role="dialog"
-          aria-labelledby="tcModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" style="color:black"
-                          id="tcModal">
-                          Terms & Conditions</h5>
-                      <button type="button" class="close"
-                          data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
-                  </div>
-                  <div class="modal-main">
-                    <iframe class="legal-frame" src="/files/terms.txt"></iframe>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button"
-                          class="btn btn-secondary"
-                          data-dismiss="modal">
-                          Close
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="modal fade" id="discmodal"
-          tabindex="-1" role="dialog"
-          aria-labelledby="discModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title"
-                          id="discmodal">
-                          Modal title
-                      </h5>
-                      <button type="button" class="close"
-                          data-dismiss="modal"
-                          aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
-                  </div>
-                  <div class="modal-main">
-                      <iframe class="legal-frame" src="/files/disclaimer.txt"></iframe>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button"
-                          class="btn btn-secondary"
-                          data-dismiss="modal">
-                          Close
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>
-
 
   <hr class= "breakline">
   <div class="copyright">

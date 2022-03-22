@@ -1,4 +1,4 @@
-<html lang="es">
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,6 @@
 <style>{{ readFile "static/css/header.css" | safeCSS }}</style>
 <script defer language="javascript" type="text/javascript"  src="{{ "/js/header.js" | urlize | relURL }}"></script>
 
-
 <body class="nav-body" style="background-color:#f0f0f0;">
   <section class="nav-bar">
   <div class="nav-container">
@@ -21,19 +20,19 @@
       <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
       <ul class="nav-list">
         <li>
-          <a href="/es/" class= "nav-font">Inicio</a>
+          <a href="/es/" class="nav-font">Inicio</a>
         </li>
         <li>
           <a class= "nav-font">Acerca de</a>
           <ul class="nav-dropdown">
             <li>
-              <a href="{{ "es/sobre/quaether" | relURL }}"class= "nav-font">Quaether</a>
+              <a href="{{ "/es/sobre/quaether" | relURL }}"class= "nav-font">Quaether</a>
             </li>
             <li>
-              <a href="{{ "es/sobre/tecnologia-bsq"| relURL }}"class= "nav-font">Tecnología BSQ</a>
+              <a href="{{ "/es/sobre/tecnologia-bsq"| relURL }}"class= "nav-font">Tecnología BSQ</a>
             </li>
             <li>
-              <a href="{{ "es/sobre/codigos"| relURL }}"class= "nav-font">Códigos</a>
+              <a href="{{ "/es/sobre/codigos"| relURL }}"class= "nav-font">Codigos</a>
             </li>
           </ul>
         </li>
@@ -41,24 +40,24 @@
           <a class= "nav-font">Productos</a>
 			    <ul class="nav-dropdown">
             <li>
-              <a href="{{ "es/productos/bsq_mini"| relURL }}"class= "nav-font">BSQ Mini</a>
+              <a href="{{ "/es/productos/bsq_mini"| relURL }}"class= "nav-font">BSQ Mini</a>
             </li>
             <li>
-                <a href="{{ "es/productos/bsq_neo"| relURL }}"class= "nav-font">BSQ Neo</a>
+                <a href="{{ "/es/productos/bsq_neo"| relURL }}"class= "nav-font">BSQ Neo</a>
             </li>
           </ul>
         </li>
         <li>
-          <a href="{{ "es/mantenimiento"| relURL }}"class= "nav-font">Mantenimiento</a>
+          <a href="{{ "/es/mantenimiento"| relURL }}"class= "nav-font">Mantenimiento</a>
         </li>
         <li>
-          <a href="{{ "es/blog"| relURL }}"class= "nav-font">Blog</a>
+          <a href="{{ "/es/blog"| relURL }}"class= "nav-font">Blog</a>
         </li>
         <li>
-          <a href="{{ "es/contacto"| relURL }}"class= "nav-font">Contacto</a>
+          <a href="{{ "/es/contacto"| relURL }}"class= "nav-font">Contacto</a>
         </li>
         <li>
-          <a href="{{ .Params.enlink | relURL }}"style="border-bottom:none;"><img class="flag" src="/images/gb.webp"></a>
+          <a href="{{ .Params.enlink | relURL }}" style="border-bottom:none;"><img class="flag" src="/images/gb.webp"></a>
         </li>
       </ul>
     </nav>
@@ -66,5 +65,6 @@
 </section>
 
 </body>
+
 
 </html>
