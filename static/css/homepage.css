@@ -151,10 +151,10 @@ color: black;
 /* Add a blue color to the author */
 .author {color: #00b300;text-align: center;}
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 378px){
 	.mySlides {
 		width:70%;
-		margin-left:15%;
+		margin-left:3%;
 	}
 }
 
@@ -166,32 +166,20 @@ color: black;
 	padding-bottom: 50px;
 }
 .video-responsive {
-	height: 0;
-	overflow: hidden;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
 	position: relative;
-	margin: 2% auto;
-	}
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
 .video-responsive iframe, .video-responsive object, .video-responsive embed {
-	height: 100%;
-	left: 0;
 	position: absolute;
 	top: 0;
+	left: 0;
 	width: 100%;
+	height: 100%;
 	}
 
-	.cover{
-		position: relative;
-		width: 85%;
-	}
 
-	.playBtn{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 10%;
-	}
 /*News cards*/
 .news-container{
 	width:80%;

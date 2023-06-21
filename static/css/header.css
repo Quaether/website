@@ -1,7 +1,7 @@
 /* fonts used on the navbar*/
 
 .nav-font{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', cursive;
 	font-weight: 500;
 	font-size: 1.05em;
 }
@@ -19,7 +19,7 @@ body .nav-body {
 
 .brand {
   position: absolute;
-	left: 60px;
+  padding-left: 20px;
   float: left;
 	z-index: 1;
 }
@@ -133,7 +133,6 @@ nav ul li ul li a {
   }
  .brand a img {
  max-height: 100px;
- 	left: 60px;
  }
 
  .flag{
