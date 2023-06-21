@@ -3,47 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/icon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/icon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
-  <link rel="manifest" href="/icon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  <title> Quaether- Blog Article</title>
-  <meta property="og:title"         content={{.Page.Title}} />
-  <meta property="og:description"   content={{.Params.description}}/>
-  <meta property="og:image"         content={{.Params.img}} />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={{.Page.Title}} />
-  <meta name="twitter:description" content={{.Params.description}} />
-  <meta name="twitter:image" content={{.Params.img}} />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
 <style>{{ readFile "static/css/post.css" | safeCSS }}</style>
 
 <!-- navbar responsive setting -->
 {{ partialCached "header.html" . .Params.eslink}}
-{{ $title := .Page.Title }}
-{{ $url := printf "%s" .Permalink }}
-{{ $image := .Params.imgsocial}}
-{{ $comment := "Read this article from Quaether" }}
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <div class= "filler" style="width:100%; height:12em; background-color: #f0f0f0"></div>
 
@@ -53,10 +24,10 @@
         <div class="col-xl">
             <div class="postBox">
               <div class="iconBar">
-                <a href="https://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-btn facebook"><i class="fa fa-facebook-f"></i></a>
-                <a href="https://twitter.com/intent/tweet?text={{ $comment }}&url={{ $url }}" target="_blank"  rel="noopener noreferrer" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a>
-                <a href="http://www.pinterest.com/pin/create/button/?url={{ $url }}&media={{ $image }}&description={{ .Params.description }}" class="pin-it-button" count-layout="horizontal" id="pinterest" target="_blank" rel="noopener noreferrer"><i class="fa fa-pinterest-p"></i></a>
-                <a href="https://wa.me/?text={{ $url }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-facebook-f"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p"></i></a>
               </div>
                 <img src={{.Params.img}} class= "post-img">
                 <h3 class="title">{{.Title}}</h3>

@@ -2,32 +2,15 @@
 <html>
 
 <head>
-  {{ partialCached "header.html" . .Params.eslink }}
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <link rel="checkmark" type="image/svg+xml" href="images/check-mark.svg"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/icon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/icon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
-  <link rel="manifest" href="/icon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  <title> Quaether-BSQ technology to fortify your biofield</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 </head>
 
@@ -38,6 +21,7 @@
 <body style="background-color:#f0f0f0;">
 
 <!-- navbar responsive setting -->
+{{ partialCached "header.html" . .Params.eslink }}
 
 <div class="aviso">
     <span class="boton-cerrar" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -45,14 +29,15 @@
   See the Legal section on the footer for more information.
 </div>
 
-<div class="headerimg"> <img src= "/images/header.webp" width=100%></div>
+
+<img src="/images/header.jpg" alt="Header" class="responsive" width=100% height=auto>
 
 </body>
 
 <body>
 <div class="row" style= "margin:4% auto;">
   <div class="col-xl" style="text-align:center; padding-top:3%;">
-    <img src="/images/homepage_welcome.webp" alt="Header" class="welcome" width=90%>
+    <img src="/images/homepage_welcome.png" alt="Header" class="responsive" width=90% height=auto>
   </div>
   <div class="col-xl">
     <br><br>
@@ -77,36 +62,16 @@
   <div class="col-xl-6 video-col" style="text-align:center; background:linear-gradient(to top, #009900 -2%, #339933 100%);">
     <div class="font1 intro-title" style= "color:#f0f0f0; padding-top:50px;" ><b> How does the BSQ technology work?</b> </div>
     <div class="video-responsive">
-    <iframe src="https://www.youtube.com/embed/Q2QmuwoDkGo" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q2QmuwoDkGo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+   </div>
   </div>
   <div class="col-xl-6 video-col" style="text-align:center; background:linear-gradient(to top, #009900 -2%, #339933 100%);">
     <div class="font1 intro-title" style= "color:#f0f0f0; padding-top:50px;"><b> How can i use the Codes with the BSQ?</b> </div>
     <div class="video-responsive">
-    <iframe src="https://www.youtube.com/embed/9badzzCr_Nw" frameborder="0" allowfullscreen></iframe>
-    </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/9badzzCr_Nw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+   </div>
   </div>
 </div>
-<script>
-function youTubes_makeDynamic() {
-  var $ytIframes = $('iframe[src*="youtube.com"]');
-  $ytIframes.each(function (i,e) {
-    var $ytFrame = $(e);
-    var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
-    var $ytLoader = $('<div class="ytLoader">');
-    $ytLoader.append($('<img class= "cover" src="https://i.ytimg.com/vi/'+ytKey+'/hqdefault.jpg">'));
-    $ytLoader.append($('<img class="playBtn" src="/images/play_button.png">'));
-    $ytLoader.data('$ytFrame',$ytFrame);
-    $ytFrame.replaceWith($ytLoader);
-    $ytLoader.click(function () {
-      var $ytFrame = $ytLoader.data('$ytFrame');
-      $ytFrame.attr('src',$ytFrame.attr('src')+'?autoplay=1');
-      $ytLoader.replaceWith($ytFrame);
-    });
-  });
-};
-$(document).ready(function () {youTubes_makeDynamic()});
-</script>
 </body>
 <br><br>
 
@@ -153,138 +118,10 @@ $(document).ready(function () {youTubes_makeDynamic()});
 
           </div>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     	<!-- testimonials end -->
       <hr class="bookends">
     </div>
 </body>
-
-<div class="news-container">
-    <div class="row" style="padding-bottom:50px">
-        <div class="col-xl">
-            <div class="news">
-                <div class="news-image">
-                    {{range (where .Paginator.Pages ".Params.top1"  "true")}}
-                      <img src={{.Params.img}}>
-                      <p class="description">
-                          {{ .Params.description }}
-                      </p>
-                    {{ end }}
-
-                    <ul class="social">
-                      {{range (where .Paginator.Pages ".Params.top1"  "true")}}
-                      <meta property="og:title"         content={{.Page.Title}} />
-                      <meta property="og:description"   content={{.Params.description}}/>
-                      <meta property="og:image"         content={{.Params.img}} />
-                      <meta name="twitter:card" content="summary_large_image" />
-                      <meta name="twitter:title" content={{.Page.Title}} />
-                      <meta name="twitter:description" content={{.Params.description}} />
-                      <meta name="twitter:image" content={{.Params.img}} />
-                      {{ $title := .Page.Title }}
-                      {{ $url := printf "%s" .Permalink }}
-                      {{ $image := .Params.imgsocial}}
-                      {{ $comment := "Read this article from Quaether" }}
-                      <li><a href="https://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-btn facebook"><i class="fa fa-facebook-f"></i></a></li>
-                      <li><a href="https://twitter.com/intent/tweet?text={{ $comment }}&url={{ $url }}" target="_blank"  rel="noopener noreferrer" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="http://www.pinterest.com/pin/create/button/?url={{ $url }}&media={{ $image }}&description={{ .Params.description }}" class="pin-it-button" count-layout="horizontal" id="pinterest" target="_blank" rel="noopener noreferrer"><i class="fa fa-pinterest-p"></i></a></li>
-                      <li><a href="https://wa.me/?text={{ $url }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a></li>
-                      {{ end }}
-                    </ul>
-                </div>
-                <div class="news-info">
-                  {{range (where .Paginator.Pages ".Params.top1"  "true")}}
-                    <h3 class="title">{{ .Page.Title }}</h3>
-                  {{ end }}
-                </div>
-                  {{range (where .Paginator.Pages ".Params.top1"  "true")}}
-                  <a href="{{ .Permalink }}" class="read">READ MORE</a>
-                {{ end }}
-            </div>
-        </div>
-
-        <div class="col-xl">
-            <div class="news">
-                <div class="news-image">
-                    {{range (where .Paginator.Pages ".Params.top2"  "true")}}
-                    <img src={{.Params.img}}>
-                      <p class="description">
-                          {{ .Params.description }}
-                      </p>
-                    {{ end }}
-                    <ul class="social">
-                      {{range (where .Paginator.Pages ".Params.top2"  "true")}}
-                      <meta property="og:title"         content={{.Page.Title}} />
-                      <meta property="og:description"   content={{.Params.description}}/>
-                      <meta property="og:image"         content={{.Params.img}} />
-                      <meta name="twitter:card" content="summary_large_image" />
-                      <meta name="twitter:title" content={{.Page.Title}} />
-                      <meta name="twitter:description" content={{.Params.description}} />
-                      <meta name="twitter:image" content={{.Params.img}} />
-                      {{ $title := .Page.Title }}
-                      {{ $url := printf "%s" .Permalink }}
-                      {{ $image := .Params.imgsocial}}
-                      {{ $comment := "Read this article from Quaether" }}
-                      <li><a href="https://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-btn facebook"><i class="fa fa-facebook-f"></i></a></li>
-                      <li><a href="https://twitter.com/intent/tweet?text={{ $comment }}&url={{ $url }}" target="_blank"  rel="noopener noreferrer" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="http://www.pinterest.com/pin/create/button/?url={{ $url }}&media={{ $image }}&description={{ .Params.description }}" class="pin-it-button" count-layout="horizontal" id="pinterest" target="_blank" rel="noopener noreferrer"><i class="fa fa-pinterest-p"></i></a></li>
-                      <li><a href="https://wa.me/?text={{ $url }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a></li>
-                      {{ end }}
-                    </ul>
-                    </ul>
-                </div>
-                <div class="news-info">
-                  {{range (where .Paginator.Pages ".Params.top2"  "true")}}
-                    <h3 class="title">{{ .Page.Title }}</h3>
-                  {{ end }}
-                </div>
-                {{range (where .Paginator.Pages ".Params.top2"  "true")}}
-                  <a href="{{ .Permalink }}" class="read">READ MORE</a>
-                {{ end }}
-            </div>
-        </div>
-
-        <div class="col-xl">
-            <div class="news">
-                <div class="news-image">
-                    {{range (where .Paginator.Pages ".Params.top3"  "true")}}
-                      <img src={{.Params.img}}>
-                      <p class="description">
-                          {{ .Params.description }}
-                      </p>
-                    {{ end }}
-                    <ul class="social">
-                      {{range (where .Paginator.Pages ".Params.top3"  "true")}}
-                      <meta property="og:title"         content={{.Page.Title}} />
-                      <meta property="og:description"   content={{.Params.description}}/>
-                      <meta property="og:image"         content={{.Params.img}} />
-                      <meta name="twitter:card" content="summary_large_image" />
-                      <meta name="twitter:title" content={{.Page.Title}} />
-                      <meta name="twitter:description" content={{.Params.description}} />
-                      <meta name="twitter:image" content={{.Params.img}} />
-                      {{ $title := .Page.Title }}
-                      {{ $url := printf "%s" .Permalink }}
-                      {{ $image := .Params.imgsocial}}
-                      {{ $comment := "Read this article from Quaether" }}
-                      <li><a href="https://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-btn facebook"><i class="fa fa-facebook-f"></i></a></li>
-                      <li><a href="https://twitter.com/intent/tweet?text={{ $comment }}&url={{ $url }}" target="_blank"  rel="noopener noreferrer" class="twitter" aria-label="share on Twitter"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="http://www.pinterest.com/pin/create/button/?url={{ $url }}&media={{ $image }}&description={{ .Params.description }}" class="pin-it-button" count-layout="horizontal" id="pinterest" target="_blank" rel="noopener noreferrer"><i class="fa fa-pinterest-p"></i></a></li>
-                      <li><a href="https://wa.me/?text={{ $url }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a></li>
-                      {{ end }}
-                    </ul>
-                    </ul>
-                </div>
-                <div class="news-info">
-                  {{range (where .Paginator.Pages ".Params.top3"  "true")}}
-                    <h3 class="title">{{ .Page.Title }}</h3>
-                  {{ end }}
-                </div>
-                {{range (where .Paginator.Pages ".Params.top3"  "true")}}
-                  <a href="{{ .Permalink }}" class="read">READ MORE</a>
-                {{ end }}
-            </div>
-        </div>
-    </div>
-</div>
 
 
 {{ partialCached "subscribe.html" . }}

@@ -2,19 +2,20 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
 <style>{{ readFile "static/css/header.css" | safeCSS }}</style>
 <script defer language="javascript" type="text/javascript"  src="{{ "/js/header.js" | urlize | relURL }}"></script>
 
+
 <body class="nav-body" style="background-color:#f0f0f0;">
   <section class="nav-bar">
   <div class="nav-container">
     <div class="brand">
-      <a href="/"><img src="/images/quaether-logo.webp"></a>
+      <a href="/"><img src="/images/quaether-logo.png"></a>
     </div>
     <nav>
       <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
@@ -57,13 +58,13 @@
           <a href="{{ "contact"| relURL }}"class= "nav-font">Contact</a>
         </li>
         <li>
-          <a href="{{ .Params.eslink | relURL }}" style="border-bottom:none;"><img class="flag" src="/images/es.webp"></a>
+          <a href="{{ .Params.eslink | relURL }}" style="border-bottom:none;"><img class="flag" src="/images/es.png"></a>
         </li>
       </ul>
     </nav>
   </div>
 </section>
-
 </body>
 
+<body>
 </html>

@@ -2,6 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -11,7 +12,7 @@
 <body class="fo">
 <footer class="footer">
   <div class="footer__addr">
-    <h1 class="footer__logo"style="text-align:center"><img src="/images/quaether.webp" style= "width:150px; height:150px;"></h1>
+    <h1 class="footer__logo"style="text-align:center"><img src="/images/quaether.png" style= "width:150px; height:150px;"></h1>
 
     <address style="text-align:center">
       La Pampa 2753 1st floor,1428<br> Buenos Aires, Argentina <br>
@@ -63,21 +64,111 @@
     <li class="nav__item">
       <h2 class="nav__title"><b>LEGAL</b></h2>
 
-      <ul class="nav__ul">
-        <li>
-        <a href="{{ "/privacy-policy"| relURL }}"> Privacy Policy </a>
+      <ul class="nav__ul" id= "myUL">
+        <li data-toggle="modal" data-target="#ppModal" data-whatever="Privacy">
+          <a> Privacy Policy </a>
         </li>
 
-        <li>
-          <a href="{{ "/terms-of-service"| relURL }}"> Terms & Conditions </a>
+        <li data-toggle="modal" data-target="#tcModal" data-whatever="Terms">
+          <a> Terms & Conditions </a>
         </li>
 
-        <li>
-          <a href="{{ "/disclaimer"| relURL }}"> Disclaimer</a>
+        <li data-toggle="modal" data-target="#discModal" data-whatever="Disclaimer">
+          <a>Disclaimer</a>
         </li>
       </ul>
     </li>
   </ul>
+
+  <div class="modal fade" id="ppModal"
+          tabindex="-1" role="dialog"
+          aria-labelledby="ppModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" style="color:black"
+                          id="ppModal">
+                          Privacy Policy
+                      </h5>
+                      <button type="button" class="close"
+                          data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                  </div>
+                  <div class="modal-main">
+                      <iframe class="legal-frame" src="/files/privacy-policy.txt"></iframe>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class=
+                          "btn btn-secondary" data-dismiss="modal">
+                          Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal fade" id="tcmodal"
+          tabindex="-1" role="dialog"
+          aria-labelledby="tcModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" style="color:black"
+                          id="tcModal">
+                          Terms & Conditions</h5>
+                      <button type="button" class="close"
+                          data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                  </div>
+                  <div class="modal-main">
+                    <iframe class="legal-frame" src="/files/terms.txt"></iframe>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button"
+                          class="btn btn-secondary"
+                          data-dismiss="modal">
+                          Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal fade" id="discmodal"
+          tabindex="-1" role="dialog"
+          aria-labelledby="discModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title"
+                          id="discmodal">
+                          Modal title
+                      </h5>
+                      <button type="button" class="close"
+                          data-dismiss="modal"
+                          aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                  </div>
+                  <div class="modal-main">
+                      <iframe class="legal-frame" src="/files/disclaimer.txt"></iframe>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button"
+                          class="btn btn-secondary"
+                          data-dismiss="modal">
+                          Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
 
   <hr class= "breakline">
   <div class="copyright">

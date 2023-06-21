@@ -2,28 +2,12 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:medium,regular">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/icon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/icon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
-<link rel="manifest" href="/icon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-  <title> Quaether- Lista de articulos del blog disponibles</title>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
 <style>{{ readFile "static/css/articles-list.css" | safeCSS }}</style>
@@ -41,6 +25,14 @@
     <div class="photo" style="background-image: url({{ with .Params.img }}{{ . }}{{ end }})"></div>
     <ul class="details">
       <li class="date">{{.Params.setdate}}</li>
+      <li class="tags">
+        <ul>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+        </ul>
+      </li>
     </ul>
   </div>
   <div class="description">
